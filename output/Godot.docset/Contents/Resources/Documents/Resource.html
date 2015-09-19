@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Class Resource</title>
+    <link rel="stylesheet" href="../index.css">
+</head>
+
+<body>
+
+<!-------------- BEGIN HERE ---------------->
+<div id="doc-container">
+
+    <h1 class="class-name">Resource</h1>
+    <div class="class-section">
+
+
+        <div class="class-descriptions">
+            <h4 class="class-subtitle">Brief Description</h4>
+            <div class="class-brief-description">
+                 Base class for all resources. 
+            </div>
+            <h4 class="class-subtitle">Full Description</h4>
+            <div class="class-description">
+                 Resource is the base class for all resource types. Resources are primarily data containers. They are reference counted and freed when no longer in use. They are also loaded only once from disk, and further attempts to load the resource will return the same reference (all this in contrast to a [Node], which is not reference counted and can be instanced from disk as many times as desred). Resources can be saved externally on disk or bundled into another object, such as a [Node] or another resource. 
+            </div>
+        </div> <!-- end div.class-descriptions -->
+
+        <div class="class-methods">
+            <h2 class="class-title">Methods</h2>
+
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_path" href="#" class="class-method-name dashAnchor">set_path</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_path</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">path</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set the path of the resource. This is useful mainly for editors when saving/loading, and shouldn&#x27;t be changed by anything else. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/take_over_path" href="#" class="class-method-name dashAnchor">take_over_path</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">take_over_path</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">path</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_path" href="#" class="class-method-name dashAnchor">get_path</a></h3>
+                <span class="class-method-declaration">
+                    <a href="String.html" class="class-specified-type">String</a>
+                    <span class="class-specified-name">get_path</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the path of the resource. This is useful mainly for editors when saving/loading, and shouldn&#x27;t be changed by anything else. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_name" href="#" class="class-method-name dashAnchor">set_name</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_name</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">name</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set the name of the resources, any name is valid (it doesn&#x27;t have to be unique). Name is for descriptive purposes only. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_name" href="#" class="class-method-name dashAnchor">get_name</a></h3>
+                <span class="class-method-declaration">
+                    <a href="String.html" class="class-specified-type">String</a>
+                    <span class="class-specified-name">get_name</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the name of the resources, any name is valid (it doesn&#x27;t have to be unique). Name is for descriptive purposes only. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_rid" href="#" class="class-method-name dashAnchor">get_rid</a></h3>
+                <span class="class-method-declaration">
+                    <a href="RID.html" class="class-specified-type">RID</a>
+                    <span class="class-specified-name">get_rid</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the RID of the resource (or an empty RID). Many resources (such as [Texture], [Mesh], etc) are high level abstractions of resources stored in a server, so this function will return the original RID. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_import_metadata" href="#" class="class-method-name dashAnchor">set_import_metadata</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_import_metadata</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Object.html" class="class-specified-type">Object</a>
+                                <span class="class-specified-name">metadata</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_import_metadata" href="#" class="class-method-name dashAnchor">get_import_metadata</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Object.html" class="class-specified-type">Object</a>
+                    <span class="class-specified-name">get_import_metadata</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/duplicate" href="#" class="class-method-name dashAnchor">duplicate</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Object.html" class="class-specified-type">Object</a>
+                    <span class="class-specified-name">duplicate</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="bool.html" class="class-specified-type">bool</a>
+                                <span class="class-specified-name">arg0</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+            </div> <!-- end div.class-method -->
+        </div> <!-- end div.class-methods -->
+
+
+
+
+
+        <div class="class-signals">
+            <h2 class="class-title">Signals</h2>
+            <div class="class-signal">
+                <div class="class-specified-name">
+                    <a name="//apple_ref/cpp/Event/changed" class="dashAnchor">changed</a>
+                </div>
+
+
+            </div>
+
+        </div> <!-- end div.class-signals -->
+
+
+    </div> <!-- end div.class-section -->
+</div>
+<!-------------- END HERE ---------------->
+
+</body>
+
+</html>

@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Class CanvasItem</title>
+    <link rel="stylesheet" href="../index.css">
+</head>
+
+<body>
+
+<!-------------- BEGIN HERE ---------------->
+<div id="doc-container">
+
+    <h1 class="class-name">CanvasItem</h1>
+    <div class="class-section">
+
+
+        <div class="class-descriptions">
+            <h4 class="class-subtitle">Brief Description</h4>
+            <div class="class-brief-description">
+                 Base class of anything 2D. 
+            </div>
+            <h4 class="class-subtitle">Full Description</h4>
+            <div class="class-description">
+                 Base class of anything 2D. Canvas items are laid out in a tree and children inherit and extend the transform of their parent. CanvasItem is extended by [Control], for anything GUI related, and by [Node2D] for anything 2D engine related. Any CanvasItem can draw. For this, the &quot;update&quot; function must be called, then NOTIFICATION_DRAW will be received on idle time to request redraw. Because of this, canvas items don&#x27;t need to be redraw on every frame, improving the performance significan&#x27;tly. Several functions for drawing on the CanvasItem are provided (see draw_* functions). They can only be used inside the notification, signal or _draw() overrided function, though. Canvas items are draw in tree order. By default, children are on top of their parents so a root CanvasItem will be drawn behind everything (this can be changed per item though). Canvas items can also be hidden (hiding also their subtree). They provide many means for changing standard parameters such as opacity (for it and the subtree) and self opacity, blend mode. Ultimately, a transform notification can be requested, which will notify the node that its global position changed in case the parent tree changed. 
+            </div>
+        </div> <!-- end div.class-descriptions -->
+
+        <div class="class-methods">
+            <h2 class="class-title">Methods</h2>
+
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/_draw" href="#" class="class-method-name dashAnchor">_draw</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">_draw</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Called (if exists) to draw the canvas item. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/edit_set_state" href="#" class="class-method-name dashAnchor">edit_set_state</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">edit_set_state</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="var.html" class="class-specified-type">var</a>
+                                <span class="class-specified-name">state</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Used for editing, returns an opaque value represeting the transform state. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/edit_get" href="#" class="class-method-name dashAnchor">edit_get</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">edit_get</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/edit_set_rect" href="#" class="class-method-name dashAnchor">edit_set_rect</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">edit_set_rect</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Rect2.html" class="class-specified-type">Rect2</a>
+                                <span class="class-specified-name">rect</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/edit_rotate" href="#" class="class-method-name dashAnchor">edit_rotate</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">edit_rotate</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="float.html" class="class-specified-type">float</a>
+                                <span class="class-specified-name">degrees</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Used for editing, handle rotation. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_item_rect" href="#" class="class-method-name dashAnchor">get_item_rect</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Rect2.html" class="class-specified-type">Rect2</a>
+                    <span class="class-specified-name">get_item_rect</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return a rect containing the editable contents of the item. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_canvas_item" href="#" class="class-method-name dashAnchor">get_canvas_item</a></h3>
+                <span class="class-method-declaration">
+                    <a href="RID.html" class="class-specified-type">RID</a>
+                    <span class="class-specified-name">get_canvas_item</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the canvas item RID used by [VisualServer] for this item. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/is_visible" href="#" class="class-method-name dashAnchor">is_visible</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">is_visible</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return true if this CanvasItem is visible. It may be invisible because itself or a parent canvas item is hidden. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/is_hidden" href="#" class="class-method-name dashAnchor">is_hidden</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">is_hidden</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return true if this CanvasItem is hidden. Note that the CanvasItem may not be visible, but as long as it&#x27;s not hidden ([method hide] called) the function will return false. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/show" href="#" class="class-method-name dashAnchor">show</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">show</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Show the CanvasItem currently hidden. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/hide" href="#" class="class-method-name dashAnchor">hide</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">hide</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Hide the CanvasItem currently visible. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/update" href="#" class="class-method-name dashAnchor">update</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">update</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Queue the CanvasItem for update. NOTIFICATION_DRAW will be called on idle time to request redraw. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_as_toplevel" href="#" class="class-method-name dashAnchor">set_as_toplevel</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_as_toplevel</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="bool.html" class="class-specified-type">bool</a>
+                                <span class="class-specified-name">enable</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set as toplevel. This means that it will not inherit transform from parent canvas items. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/is_set_as_toplevel" href="#" class="class-method-name dashAnchor">is_set_as_toplevel</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">is_set_as_toplevel</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return if set as toplevel. See [method set_as_toplevel]/ 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_blend_mode" href="#" class="class-method-name dashAnchor">set_blend_mode</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_blend_mode</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">blend_mode</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set the blending mode from enum BLEND_MODE_*. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_blend_mode" href="#" class="class-method-name dashAnchor">get_blend_mode</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">get_blend_mode</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the current blending mode from enum BLEND_MODE_*. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_opacity" href="#" class="class-method-name dashAnchor">set_opacity</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_opacity</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="float.html" class="class-specified-type">float</a>
+                                <span class="class-specified-name">opacity</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set canvas item opacity. This will affect the canvas item and all the children. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_opacity" href="#" class="class-method-name dashAnchor">get_opacity</a></h3>
+                <span class="class-method-declaration">
+                    <a href="float.html" class="class-specified-type">float</a>
+                    <span class="class-specified-name">get_opacity</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the canvas item opacity. This affects the canvas item and all the children. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_self_opacity" href="#" class="class-method-name dashAnchor">set_self_opacity</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_self_opacity</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="float.html" class="class-specified-type">float</a>
+                                <span class="class-specified-name">self_opacity</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set canvas item self-opacity. This does not affect the opacity of children items. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_self_opacity" href="#" class="class-method-name dashAnchor">get_self_opacity</a></h3>
+                <span class="class-method-declaration">
+                    <a href="float.html" class="class-specified-type">float</a>
+                    <span class="class-specified-name">get_self_opacity</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the canvas item self-opacity. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_draw_behind_parent" href="#" class="class-method-name dashAnchor">set_draw_behind_parent</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_draw_behind_parent</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="bool.html" class="class-specified-type">bool</a>
+                                <span class="class-specified-name">enabe</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Sets whether the canvas item is drawn behind its parent. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/is_draw_behind_parent_enabled" href="#" class="class-method-name dashAnchor">is_draw_behind_parent_enabled</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">is_draw_behind_parent_enabled</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return whether the item is drawn behind its parent. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/draw_line" href="#" class="class-method-name dashAnchor">draw_line</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">draw_line</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                                <span class="class-specified-name">from</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                                <span class="class-specified-name">to</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Color.html" class="class-specified-type">Color</a>
+                                <span class="class-specified-name">color</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="float.html" class="class-specified-type">float</a>
+                                <span class="class-specified-name">width</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Draw a line from a 2D point to another, with a given color and width. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/draw_rect" href="#" class="class-method-name dashAnchor">draw_rect</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">draw_rect</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Rect2.html" class="class-specified-type">Rect2</a>
+                                <span class="class-specified-name">rect</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Color.html" class="class-specified-type">Color</a>
+                                <span class="class-specified-name">color</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Draw a colored rectangle. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/draw_circle" href="#" class="class-method-name dashAnchor">draw_circle</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">draw_circle</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                                <span class="class-specified-name">pos</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="float.html" class="class-specified-type">float</a>
+                                <span class="class-specified-name">radius</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Color.html" class="class-specified-type">Color</a>
+                                <span class="class-specified-name">color</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Draw a colored circle. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/draw_texture" href="#" class="class-method-name dashAnchor">draw_texture</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">draw_texture</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Texture.html" class="class-specified-type">Texture</a>
+                                <span class="class-specified-name">texture</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                                <span class="class-specified-name">pos</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Draw a texture at a given position. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/draw_texture_rect" href="#" class="class-method-name dashAnchor">draw_texture_rect</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">draw_texture_rect</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Texture.html" class="class-specified-type">Texture</a>
+                                <span class="class-specified-name">texture</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Rect2.html" class="class-specified-type">Rect2</a>
+                                <span class="class-specified-name">rect</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="bool.html" class="class-specified-type">bool</a>
+                                <span class="class-specified-name">tile</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Color.html" class="class-specified-type">Color</a>
+                                <span class="class-specified-name">modulate</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="bool.html" class="class-specified-type">bool</a>
+                                <span class="class-specified-name">transpose</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Draw a textured rectangle at a given position, optionally modulated by a color. Transpose swaps the x and y coordinates when reading the texture. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/draw_texture_rect_region" href="#" class="class-method-name dashAnchor">draw_texture_rect_region</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">draw_texture_rect_region</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Texture.html" class="class-specified-type">Texture</a>
+                                <span class="class-specified-name">texture</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Rect2.html" class="class-specified-type">Rect2</a>
+                                <span class="class-specified-name">rect</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Rect2.html" class="class-specified-type">Rect2</a>
+                                <span class="class-specified-name">src_rect</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Color.html" class="class-specified-type">Color</a>
+                                <span class="class-specified-name">modulate</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="bool.html" class="class-specified-type">bool</a>
+                                <span class="class-specified-name">transpose</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Draw a textured rectangle region at a given position, optionally modulated by a color. Transpose swaps the x and y coordinates when reading the texture. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/draw_style_box" href="#" class="class-method-name dashAnchor">draw_style_box</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">draw_style_box</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="StyleBox.html" class="class-specified-type">StyleBox</a>
+                                <span class="class-specified-name">style_box</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Rect2.html" class="class-specified-type">Rect2</a>
+                                <span class="class-specified-name">rect</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Draw a styled rectangle. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/draw_primitive" href="#" class="class-method-name dashAnchor">draw_primitive</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">draw_primitive</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Vector2Array.html" class="class-specified-type">Vector2Array</a>
+                                <span class="class-specified-name">points</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="ColorArray.html" class="class-specified-type">ColorArray</a>
+                                <span class="class-specified-name">colors</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Vector2Array.html" class="class-specified-type">Vector2Array</a>
+                                <span class="class-specified-name">uvs</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Texture.html" class="class-specified-type">Texture</a>
+                                <span class="class-specified-name">texture</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="float.html" class="class-specified-type">float</a>
+                                <span class="class-specified-name">width</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Draw a custom primitive, 1 point for a point, 2 points for a line, 3 points for a triangle and 4 points for a quad. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/draw_polygon" href="#" class="class-method-name dashAnchor">draw_polygon</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">draw_polygon</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Vector2Array.html" class="class-specified-type">Vector2Array</a>
+                                <span class="class-specified-name">points</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="ColorArray.html" class="class-specified-type">ColorArray</a>
+                                <span class="class-specified-name">colors</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Vector2Array.html" class="class-specified-type">Vector2Array</a>
+                                <span class="class-specified-name">uvs</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Texture.html" class="class-specified-type">Texture</a>
+                                <span class="class-specified-name">texture</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Draw a polygon of any amount of points, convex or concave. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/draw_colored_polygon" href="#" class="class-method-name dashAnchor">draw_colored_polygon</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">draw_colored_polygon</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Vector2Array.html" class="class-specified-type">Vector2Array</a>
+                                <span class="class-specified-name">points</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Color.html" class="class-specified-type">Color</a>
+                                <span class="class-specified-name">color</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Vector2Array.html" class="class-specified-type">Vector2Array</a>
+                                <span class="class-specified-name">uvs</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Texture.html" class="class-specified-type">Texture</a>
+                                <span class="class-specified-name">texture</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Draw a colored polygon of any amount of points, convex or concave. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/draw_string" href="#" class="class-method-name dashAnchor">draw_string</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">draw_string</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Font.html" class="class-specified-type">Font</a>
+                                <span class="class-specified-name">font</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                                <span class="class-specified-name">pos</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">text</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Color.html" class="class-specified-type">Color</a>
+                                <span class="class-specified-name">modulate</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">clip_w</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Draw a string using a custom font. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/draw_char" href="#" class="class-method-name dashAnchor">draw_char</a></h3>
+                <span class="class-method-declaration">
+                    <a href="float.html" class="class-specified-type">float</a>
+                    <span class="class-specified-name">draw_char</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Font.html" class="class-specified-type">Font</a>
+                                <span class="class-specified-name">font</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                                <span class="class-specified-name">pos</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">char</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">next</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Color.html" class="class-specified-type">Color</a>
+                                <span class="class-specified-name">modulate</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Draw a string character using a custom font. Returns the advance, depending on the char width and kerning with an optional next char. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/draw_set_transform" href="#" class="class-method-name dashAnchor">draw_set_transform</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">draw_set_transform</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                                <span class="class-specified-name">pos</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="float.html" class="class-specified-type">float</a>
+                                <span class="class-specified-name">rot</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                                <span class="class-specified-name">scale</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set a custom transform for drawing. Anything drawn afterwards will be transformed by this. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_transform" href="#" class="class-method-name dashAnchor">get_transform</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Matrix32.html" class="class-specified-type">Matrix32</a>
+                    <span class="class-specified-name">get_transform</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_global_transform" href="#" class="class-method-name dashAnchor">get_global_transform</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Matrix32.html" class="class-specified-type">Matrix32</a>
+                    <span class="class-specified-name">get_global_transform</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_viewport_transform" href="#" class="class-method-name dashAnchor">get_viewport_transform</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Matrix32.html" class="class-specified-type">Matrix32</a>
+                    <span class="class-specified-name">get_viewport_transform</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_viewport_rect" href="#" class="class-method-name dashAnchor">get_viewport_rect</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Rect2.html" class="class-specified-type">Rect2</a>
+                    <span class="class-specified-name">get_viewport_rect</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_canvas" href="#" class="class-method-name dashAnchor">get_canvas</a></h3>
+                <span class="class-method-declaration">
+                    <a href="RID.html" class="class-specified-type">RID</a>
+                    <span class="class-specified-name">get_canvas</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_world_2d" href="#" class="class-method-name dashAnchor">get_world_2d</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Object.html" class="class-specified-type">Object</a>
+                    <span class="class-specified-name">get_world_2d</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+            </div> <!-- end div.class-method -->
+        </div> <!-- end div.class-methods -->
+
+        <div class="class-constants">
+            <h2 class="class-title">Constants</h2>
+
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/BLEND_MODE_MIX" class="dashAnchor">BLEND_MODE_MIX</a></span>
+                =
+                <span class="class-specified-value">0</span>
+                <div class="class-description">
+                     Mix blending mode. Colors are assumed to be independent of the alpha (opacity) value. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/BLEND_MODE_ADD" class="dashAnchor">BLEND_MODE_ADD</a></span>
+                =
+                <span class="class-specified-value">1</span>
+                <div class="class-description">
+                     Additive blending mode. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/BLEND_MODE_SUB" class="dashAnchor">BLEND_MODE_SUB</a></span>
+                =
+                <span class="class-specified-value">2</span>
+                <div class="class-description">
+                     Substractive blending mode. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/BLEND_MODE_MUL" class="dashAnchor">BLEND_MODE_MUL</a></span>
+                =
+                <span class="class-specified-value">3</span>
+                <div class="class-description">
+                     Multiplicative blending mode. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/BLEND_MODE_PREMULT_ALPHA" class="dashAnchor">BLEND_MODE_PREMULT_ALPHA</a></span>
+                =
+                <span class="class-specified-value">4</span>
+                <div class="class-description">
+                     Mix blending mode. Colors are assumed to be premultiplied by the alpha (opacity) value. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/NOTIFICATION_DRAW" class="dashAnchor">NOTIFICATION_DRAW</a></span>
+                =
+                <span class="class-specified-value">30</span>
+                <div class="class-description">
+                     CanvasItem is requested to draw. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/NOTIFICATION_VISIBILITY_CHANGED" class="dashAnchor">NOTIFICATION_VISIBILITY_CHANGED</a></span>
+                =
+                <span class="class-specified-value">31</span>
+                <div class="class-description">
+                     Canvas item visibility has changed. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/NOTIFICATION_ENTER_CANVAS" class="dashAnchor">NOTIFICATION_ENTER_CANVAS</a></span>
+                =
+                <span class="class-specified-value">32</span>
+                <div class="class-description">
+                     Canvas item has entered the canvas. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/NOTIFICATION_EXIT_CANVAS" class="dashAnchor">NOTIFICATION_EXIT_CANVAS</a></span>
+                =
+                <span class="class-specified-value">33</span>
+                <div class="class-description">
+                     Canvas item has exited the canvas. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/NOTIFICATION_TRANSFORM_CHANGED" class="dashAnchor">NOTIFICATION_TRANSFORM_CHANGED</a></span>
+                =
+                <span class="class-specified-value">29</span>
+                <div class="class-description">
+                     Canvas item transform has changed. Only received if requested. 
+                </div>
+            </div>
+        </div> <!-- End div.class-constants -->
+
+
+
+
+        <div class="class-signals">
+            <h2 class="class-title">Signals</h2>
+            <div class="class-signal">
+                <div class="class-specified-name">
+                    <a name="//apple_ref/cpp/Event/item_rect_changed" class="dashAnchor">item_rect_changed</a>
+                </div>
+
+
+            </div>
+            <div class="class-signal">
+                <div class="class-specified-name">
+                    <a name="//apple_ref/cpp/Event/draw" class="dashAnchor">draw</a>
+                </div>
+
+
+            </div>
+            <div class="class-signal">
+                <div class="class-specified-name">
+                    <a name="//apple_ref/cpp/Event/visibility_changed" class="dashAnchor">visibility_changed</a>
+                </div>
+
+
+            </div>
+            <div class="class-signal">
+                <div class="class-specified-name">
+                    <a name="//apple_ref/cpp/Event/hide" class="dashAnchor">hide</a>
+                </div>
+
+
+            </div>
+
+        </div> <!-- end div.class-signals -->
+
+
+    </div> <!-- end div.class-section -->
+</div>
+<!-------------- END HERE ---------------->
+
+</body>
+
+</html>

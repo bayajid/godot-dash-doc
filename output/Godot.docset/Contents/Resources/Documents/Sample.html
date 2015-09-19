@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Class Sample</title>
+    <link rel="stylesheet" href="../index.css">
+</head>
+
+<body>
+
+<!-------------- BEGIN HERE ---------------->
+<div id="doc-container">
+
+    <h1 class="class-name">Sample</h1>
+    <div class="class-section">
+
+
+        <div class="class-descriptions">
+            <h4 class="class-subtitle">Brief Description</h4>
+            <div class="class-brief-description">
+                 Audio Sample (sound) class. 
+            </div>
+            <h4 class="class-subtitle">Full Description</h4>
+            <div class="class-description">
+                 Sample provides an audio sample class, containing audio data, together with some information for playback, such as format, mix rate and loop. It is used by sound playback routines. 
+            </div>
+        </div> <!-- end div.class-descriptions -->
+
+        <div class="class-methods">
+            <h2 class="class-title">Methods</h2>
+
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/create" href="#" class="class-method-name dashAnchor">create</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">create</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">format</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="bool.html" class="class-specified-type">bool</a>
+                                <span class="class-specified-name">stereo</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">length</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Create new data for the sample, with format &quot;format&quot; (see FORMAT_* enum), stereo hint, and length in frames (not samples or bytes!) &quot;frame&quot;. Calling create overrides previous existing data if it exists. Stereo samples are interleaved pairs of left and right (in that order) points 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_format" href="#" class="class-method-name dashAnchor">get_format</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">get_format</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the sample format (see FORMAT_* enum). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/is_stereo" href="#" class="class-method-name dashAnchor">is_stereo</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">is_stereo</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return true if the sample was created stereo. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_length" href="#" class="class-method-name dashAnchor">get_length</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">get_length</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the sample length in frames. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_data" href="#" class="class-method-name dashAnchor">set_data</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_data</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RawArray.html" class="class-specified-type">RawArray</a>
+                                <span class="class-specified-name">data</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set sample data. Data must be little endian, no matter the host platform, and exactly as long to fit all frames. Example, if data is Stereo, 16 bits, 256 frames, it will be 1024 bytes long. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_data" href="#" class="class-method-name dashAnchor">get_data</a></h3>
+                <span class="class-method-declaration">
+                    <a href="RawArray.html" class="class-specified-type">RawArray</a>
+                    <span class="class-specified-name">get_data</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return sample data. Data will be little endian, no matter the host platform, and exactly as long to fit all frames. Example, if data is Stereo, 16 bits, 256 frames, it will be 1024 bytes long. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_mix_rate" href="#" class="class-method-name dashAnchor">set_mix_rate</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_mix_rate</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">hz</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set the mix rate for the sample (expected playback frequency). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_mix_rate" href="#" class="class-method-name dashAnchor">get_mix_rate</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">get_mix_rate</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the mix rate for the sample (expected playback frequency). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_loop_format" href="#" class="class-method-name dashAnchor">set_loop_format</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_loop_format</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">format</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set the loop format, see LOOP_* enum 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_loop_format" href="#" class="class-method-name dashAnchor">get_loop_format</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">get_loop_format</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the loop format, see LOOP_* enum. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_loop_begin" href="#" class="class-method-name dashAnchor">set_loop_begin</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_loop_begin</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">pos</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set the loop begin position, it must be a valid frame and less than the loop end position. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_loop_begin" href="#" class="class-method-name dashAnchor">get_loop_begin</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">get_loop_begin</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the loop begin position. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_loop_end" href="#" class="class-method-name dashAnchor">set_loop_end</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_loop_end</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">pos</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set the loop end position, it must be a valid frame and greater than the loop begin position. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_loop_end" href="#" class="class-method-name dashAnchor">get_loop_end</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">get_loop_end</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the loop begin position. 
+                </div>
+
+
+            </div> <!-- end div.class-method -->
+        </div> <!-- end div.class-methods -->
+
+        <div class="class-constants">
+            <h2 class="class-title">Constants</h2>
+
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/FORMAT_PCM8" class="dashAnchor">FORMAT_PCM8</a></span>
+                =
+                <span class="class-specified-value">0</span>
+                <div class="class-description">
+                     8-Bits signed little endian PCM audio. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/FORMAT_PCM16" class="dashAnchor">FORMAT_PCM16</a></span>
+                =
+                <span class="class-specified-value">1</span>
+                <div class="class-description">
+                     16-Bits signed little endian PCM audio. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/FORMAT_IMA_ADPCM" class="dashAnchor">FORMAT_IMA_ADPCM</a></span>
+                =
+                <span class="class-specified-value">2</span>
+                <div class="class-description">
+                     IMA-ADPCM Audio. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/LOOP_NONE" class="dashAnchor">LOOP_NONE</a></span>
+                =
+                <span class="class-specified-value">0</span>
+                <div class="class-description">
+                     No loop enabled. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/LOOP_FORWARD" class="dashAnchor">LOOP_FORWARD</a></span>
+                =
+                <span class="class-specified-value">1</span>
+                <div class="class-description">
+                     Forward looping (when playback reaches loop end, goes back to loop begin) 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/LOOP_PING_PONG" class="dashAnchor">LOOP_PING_PONG</a></span>
+                =
+                <span class="class-specified-value">2</span>
+                <div class="class-description">
+                     Ping-Pong looping (when playback reaches loop end, plays backward untilloop begin). Not available in all platforms. 
+                </div>
+            </div>
+        </div> <!-- End div.class-constants -->
+
+
+
+
+
+
+    </div> <!-- end div.class-section -->
+</div>
+<!-------------- END HERE ---------------->
+
+</body>
+
+</html>

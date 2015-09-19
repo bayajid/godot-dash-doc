@@ -1,0 +1,3649 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Class @Global Scope</title>
+    <link rel="stylesheet" href="../index.css">
+</head>
+
+<body>
+
+<!-------------- BEGIN HERE ---------------->
+<div id="doc-container">
+
+    <h1 class="class-name">@Global Scope</h1>
+    <div class="class-section">
+
+
+        <div class="class-descriptions">
+            <h4 class="class-subtitle">Brief Description</h4>
+            <div class="class-brief-description">
+                 Global scope constants and variables. 
+            </div>
+            <h4 class="class-subtitle">Full Description</h4>
+            <div class="class-description">
+                 Global scope constants and variables. This is all that resides in the globals, constants regarding error codes, scancodes, property hints, etc. It&#x27;s not much. Singletons are also documented here, since they can be accessed from anywhere. 
+            </div>
+        </div> <!-- end div.class-descriptions -->
+
+
+        <div class="class-constants">
+            <h2 class="class-title">Constants</h2>
+
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/MARGIN_LEFT" class="dashAnchor">MARGIN_LEFT</a></span>
+                =
+                <span class="class-specified-value">0</span>
+                <div class="class-description">
+                     Left margin, used usually for [Control] or [StyleBox] derived classes. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/MARGIN_TOP" class="dashAnchor">MARGIN_TOP</a></span>
+                =
+                <span class="class-specified-value">1</span>
+                <div class="class-description">
+                     Top margin, used usually for [Control] or [StyleBox] derived classes. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/MARGIN_RIGHT" class="dashAnchor">MARGIN_RIGHT</a></span>
+                =
+                <span class="class-specified-value">2</span>
+                <div class="class-description">
+                     Right margin, used usually for [Control] or [StyleBox] derived classes. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/MARGIN_BOTTOM" class="dashAnchor">MARGIN_BOTTOM</a></span>
+                =
+                <span class="class-specified-value">3</span>
+                <div class="class-description">
+                     Bottom margin, used usually for [Control] or [StyleBox] derived classes. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/VERTICAL" class="dashAnchor">VERTICAL</a></span>
+                =
+                <span class="class-specified-value">1</span>
+                <div class="class-description">
+                     General vertical alignment, used usually for [Separator], [ScrollBar], [Slider], etc. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/HORIZONTAL" class="dashAnchor">HORIZONTAL</a></span>
+                =
+                <span class="class-specified-value">0</span>
+                <div class="class-description">
+                     General horizontal alignment, used usually for [Separator], [ScrollBar], [Slider], etc. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/HALIGN_LEFT" class="dashAnchor">HALIGN_LEFT</a></span>
+                =
+                <span class="class-specified-value">0</span>
+                <div class="class-description">
+                     Horizontal left alignment, usually for text-derived classes. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/HALIGN_CENTER" class="dashAnchor">HALIGN_CENTER</a></span>
+                =
+                <span class="class-specified-value">1</span>
+                <div class="class-description">
+                     Horizontal center alignment, usually for text-derived classes. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/HALIGN_RIGHT" class="dashAnchor">HALIGN_RIGHT</a></span>
+                =
+                <span class="class-specified-value">2</span>
+                <div class="class-description">
+                     Horizontal right alignment, usually for text-derived classes. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/VALIGN_TOP" class="dashAnchor">VALIGN_TOP</a></span>
+                =
+                <span class="class-specified-value">0</span>
+                <div class="class-description">
+                     Vertical top alignment, usually for text-derived classes. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/VALIGN_CENTER" class="dashAnchor">VALIGN_CENTER</a></span>
+                =
+                <span class="class-specified-value">1</span>
+                <div class="class-description">
+                     Vertical center alignment, usually for text-derived classes. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/VALIGN_BOTTOM" class="dashAnchor">VALIGN_BOTTOM</a></span>
+                =
+                <span class="class-specified-value">2</span>
+                <div class="class-description">
+                     Vertical bottom alignment, usually for text-derived classes. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/SPKEY" class="dashAnchor">SPKEY</a></span>
+                =
+                <span class="class-specified-value">16777216</span>
+                <div class="class-description">
+                     Scancodes with this bit applied are non printable. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_ESCAPE" class="dashAnchor">KEY_ESCAPE</a></span>
+                =
+                <span class="class-specified-value">16777217</span>
+                <div class="class-description">
+                     Escape Key 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_TAB" class="dashAnchor">KEY_TAB</a></span>
+                =
+                <span class="class-specified-value">16777218</span>
+                <div class="class-description">
+                     Tab Key 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_BACKTAB" class="dashAnchor">KEY_BACKTAB</a></span>
+                =
+                <span class="class-specified-value">16777219</span>
+                <div class="class-description">
+                     Shift-Tab key 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_BACKSPACE" class="dashAnchor">KEY_BACKSPACE</a></span>
+                =
+                <span class="class-specified-value">16777220</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_RETURN" class="dashAnchor">KEY_RETURN</a></span>
+                =
+                <span class="class-specified-value">16777221</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_ENTER" class="dashAnchor">KEY_ENTER</a></span>
+                =
+                <span class="class-specified-value">16777222</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_INSERT" class="dashAnchor">KEY_INSERT</a></span>
+                =
+                <span class="class-specified-value">16777223</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_DELETE" class="dashAnchor">KEY_DELETE</a></span>
+                =
+                <span class="class-specified-value">16777224</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_PAUSE" class="dashAnchor">KEY_PAUSE</a></span>
+                =
+                <span class="class-specified-value">16777225</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_PRINT" class="dashAnchor">KEY_PRINT</a></span>
+                =
+                <span class="class-specified-value">16777226</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_SYSREQ" class="dashAnchor">KEY_SYSREQ</a></span>
+                =
+                <span class="class-specified-value">16777227</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_CLEAR" class="dashAnchor">KEY_CLEAR</a></span>
+                =
+                <span class="class-specified-value">16777228</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_HOME" class="dashAnchor">KEY_HOME</a></span>
+                =
+                <span class="class-specified-value">16777229</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_END" class="dashAnchor">KEY_END</a></span>
+                =
+                <span class="class-specified-value">16777230</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_LEFT" class="dashAnchor">KEY_LEFT</a></span>
+                =
+                <span class="class-specified-value">16777231</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_UP" class="dashAnchor">KEY_UP</a></span>
+                =
+                <span class="class-specified-value">16777232</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_RIGHT" class="dashAnchor">KEY_RIGHT</a></span>
+                =
+                <span class="class-specified-value">16777233</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_DOWN" class="dashAnchor">KEY_DOWN</a></span>
+                =
+                <span class="class-specified-value">16777234</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_PAGEUP" class="dashAnchor">KEY_PAGEUP</a></span>
+                =
+                <span class="class-specified-value">16777235</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_PAGEDOWN" class="dashAnchor">KEY_PAGEDOWN</a></span>
+                =
+                <span class="class-specified-value">16777236</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_SHIFT" class="dashAnchor">KEY_SHIFT</a></span>
+                =
+                <span class="class-specified-value">16777237</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_CONTROL" class="dashAnchor">KEY_CONTROL</a></span>
+                =
+                <span class="class-specified-value">16777238</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_META" class="dashAnchor">KEY_META</a></span>
+                =
+                <span class="class-specified-value">16777239</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_ALT" class="dashAnchor">KEY_ALT</a></span>
+                =
+                <span class="class-specified-value">16777240</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_CAPSLOCK" class="dashAnchor">KEY_CAPSLOCK</a></span>
+                =
+                <span class="class-specified-value">16777241</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_NUMLOCK" class="dashAnchor">KEY_NUMLOCK</a></span>
+                =
+                <span class="class-specified-value">16777242</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_SCROLLLOCK" class="dashAnchor">KEY_SCROLLLOCK</a></span>
+                =
+                <span class="class-specified-value">16777243</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_F1" class="dashAnchor">KEY_F1</a></span>
+                =
+                <span class="class-specified-value">16777244</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_F2" class="dashAnchor">KEY_F2</a></span>
+                =
+                <span class="class-specified-value">16777245</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_F3" class="dashAnchor">KEY_F3</a></span>
+                =
+                <span class="class-specified-value">16777246</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_F4" class="dashAnchor">KEY_F4</a></span>
+                =
+                <span class="class-specified-value">16777247</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_F5" class="dashAnchor">KEY_F5</a></span>
+                =
+                <span class="class-specified-value">16777248</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_F6" class="dashAnchor">KEY_F6</a></span>
+                =
+                <span class="class-specified-value">16777249</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_F7" class="dashAnchor">KEY_F7</a></span>
+                =
+                <span class="class-specified-value">16777250</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_F8" class="dashAnchor">KEY_F8</a></span>
+                =
+                <span class="class-specified-value">16777251</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_F9" class="dashAnchor">KEY_F9</a></span>
+                =
+                <span class="class-specified-value">16777252</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_F10" class="dashAnchor">KEY_F10</a></span>
+                =
+                <span class="class-specified-value">16777253</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_F11" class="dashAnchor">KEY_F11</a></span>
+                =
+                <span class="class-specified-value">16777254</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_F12" class="dashAnchor">KEY_F12</a></span>
+                =
+                <span class="class-specified-value">16777255</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_F13" class="dashAnchor">KEY_F13</a></span>
+                =
+                <span class="class-specified-value">16777256</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_F14" class="dashAnchor">KEY_F14</a></span>
+                =
+                <span class="class-specified-value">16777257</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_F15" class="dashAnchor">KEY_F15</a></span>
+                =
+                <span class="class-specified-value">16777258</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_F16" class="dashAnchor">KEY_F16</a></span>
+                =
+                <span class="class-specified-value">16777259</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_KP_ENTER" class="dashAnchor">KEY_KP_ENTER</a></span>
+                =
+                <span class="class-specified-value">16777344</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_KP_MULTIPLY" class="dashAnchor">KEY_KP_MULTIPLY</a></span>
+                =
+                <span class="class-specified-value">16777345</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_KP_DIVIDE" class="dashAnchor">KEY_KP_DIVIDE</a></span>
+                =
+                <span class="class-specified-value">16777346</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_KP_SUBSTRACT" class="dashAnchor">KEY_KP_SUBSTRACT</a></span>
+                =
+                <span class="class-specified-value">16777347</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_KP_PERIOD" class="dashAnchor">KEY_KP_PERIOD</a></span>
+                =
+                <span class="class-specified-value">16777348</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_KP_ADD" class="dashAnchor">KEY_KP_ADD</a></span>
+                =
+                <span class="class-specified-value">16777349</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_KP_0" class="dashAnchor">KEY_KP_0</a></span>
+                =
+                <span class="class-specified-value">16777350</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_KP_1" class="dashAnchor">KEY_KP_1</a></span>
+                =
+                <span class="class-specified-value">16777351</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_KP_2" class="dashAnchor">KEY_KP_2</a></span>
+                =
+                <span class="class-specified-value">16777352</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_KP_3" class="dashAnchor">KEY_KP_3</a></span>
+                =
+                <span class="class-specified-value">16777353</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_KP_4" class="dashAnchor">KEY_KP_4</a></span>
+                =
+                <span class="class-specified-value">16777354</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_KP_5" class="dashAnchor">KEY_KP_5</a></span>
+                =
+                <span class="class-specified-value">16777355</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_KP_6" class="dashAnchor">KEY_KP_6</a></span>
+                =
+                <span class="class-specified-value">16777356</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_KP_7" class="dashAnchor">KEY_KP_7</a></span>
+                =
+                <span class="class-specified-value">16777357</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_KP_8" class="dashAnchor">KEY_KP_8</a></span>
+                =
+                <span class="class-specified-value">16777358</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_KP_9" class="dashAnchor">KEY_KP_9</a></span>
+                =
+                <span class="class-specified-value">16777359</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_SUPER_L" class="dashAnchor">KEY_SUPER_L</a></span>
+                =
+                <span class="class-specified-value">16777260</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_SUPER_R" class="dashAnchor">KEY_SUPER_R</a></span>
+                =
+                <span class="class-specified-value">16777261</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_MENU" class="dashAnchor">KEY_MENU</a></span>
+                =
+                <span class="class-specified-value">16777262</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_HYPER_L" class="dashAnchor">KEY_HYPER_L</a></span>
+                =
+                <span class="class-specified-value">16777263</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_HYPER_R" class="dashAnchor">KEY_HYPER_R</a></span>
+                =
+                <span class="class-specified-value">16777264</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_HELP" class="dashAnchor">KEY_HELP</a></span>
+                =
+                <span class="class-specified-value">16777265</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_DIRECTION_L" class="dashAnchor">KEY_DIRECTION_L</a></span>
+                =
+                <span class="class-specified-value">16777266</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_DIRECTION_R" class="dashAnchor">KEY_DIRECTION_R</a></span>
+                =
+                <span class="class-specified-value">16777267</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_BACK" class="dashAnchor">KEY_BACK</a></span>
+                =
+                <span class="class-specified-value">16777280</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_FORWARD" class="dashAnchor">KEY_FORWARD</a></span>
+                =
+                <span class="class-specified-value">16777281</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_STOP" class="dashAnchor">KEY_STOP</a></span>
+                =
+                <span class="class-specified-value">16777282</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_REFRESH" class="dashAnchor">KEY_REFRESH</a></span>
+                =
+                <span class="class-specified-value">16777283</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_VOLUMEDOWN" class="dashAnchor">KEY_VOLUMEDOWN</a></span>
+                =
+                <span class="class-specified-value">16777284</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_VOLUMEMUTE" class="dashAnchor">KEY_VOLUMEMUTE</a></span>
+                =
+                <span class="class-specified-value">16777285</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_VOLUMEUP" class="dashAnchor">KEY_VOLUMEUP</a></span>
+                =
+                <span class="class-specified-value">16777286</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_BASSBOOST" class="dashAnchor">KEY_BASSBOOST</a></span>
+                =
+                <span class="class-specified-value">16777287</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_BASSUP" class="dashAnchor">KEY_BASSUP</a></span>
+                =
+                <span class="class-specified-value">16777288</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_BASSDOWN" class="dashAnchor">KEY_BASSDOWN</a></span>
+                =
+                <span class="class-specified-value">16777289</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_TREBLEUP" class="dashAnchor">KEY_TREBLEUP</a></span>
+                =
+                <span class="class-specified-value">16777290</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_TREBLEDOWN" class="dashAnchor">KEY_TREBLEDOWN</a></span>
+                =
+                <span class="class-specified-value">16777291</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_MEDIAPLAY" class="dashAnchor">KEY_MEDIAPLAY</a></span>
+                =
+                <span class="class-specified-value">16777292</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_MEDIASTOP" class="dashAnchor">KEY_MEDIASTOP</a></span>
+                =
+                <span class="class-specified-value">16777293</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_MEDIAPREVIOUS" class="dashAnchor">KEY_MEDIAPREVIOUS</a></span>
+                =
+                <span class="class-specified-value">16777294</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_MEDIANEXT" class="dashAnchor">KEY_MEDIANEXT</a></span>
+                =
+                <span class="class-specified-value">16777295</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_MEDIARECORD" class="dashAnchor">KEY_MEDIARECORD</a></span>
+                =
+                <span class="class-specified-value">16777296</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_HOMEPAGE" class="dashAnchor">KEY_HOMEPAGE</a></span>
+                =
+                <span class="class-specified-value">16777297</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_FAVORITES" class="dashAnchor">KEY_FAVORITES</a></span>
+                =
+                <span class="class-specified-value">16777298</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_SEARCH" class="dashAnchor">KEY_SEARCH</a></span>
+                =
+                <span class="class-specified-value">16777299</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_STANDBY" class="dashAnchor">KEY_STANDBY</a></span>
+                =
+                <span class="class-specified-value">16777300</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_OPENURL" class="dashAnchor">KEY_OPENURL</a></span>
+                =
+                <span class="class-specified-value">16777301</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_LAUNCHMAIL" class="dashAnchor">KEY_LAUNCHMAIL</a></span>
+                =
+                <span class="class-specified-value">16777302</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_LAUNCHMEDIA" class="dashAnchor">KEY_LAUNCHMEDIA</a></span>
+                =
+                <span class="class-specified-value">16777303</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_LAUNCH0" class="dashAnchor">KEY_LAUNCH0</a></span>
+                =
+                <span class="class-specified-value">16777304</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_LAUNCH1" class="dashAnchor">KEY_LAUNCH1</a></span>
+                =
+                <span class="class-specified-value">16777305</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_LAUNCH2" class="dashAnchor">KEY_LAUNCH2</a></span>
+                =
+                <span class="class-specified-value">16777306</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_LAUNCH3" class="dashAnchor">KEY_LAUNCH3</a></span>
+                =
+                <span class="class-specified-value">16777307</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_LAUNCH4" class="dashAnchor">KEY_LAUNCH4</a></span>
+                =
+                <span class="class-specified-value">16777308</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_LAUNCH5" class="dashAnchor">KEY_LAUNCH5</a></span>
+                =
+                <span class="class-specified-value">16777309</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_LAUNCH6" class="dashAnchor">KEY_LAUNCH6</a></span>
+                =
+                <span class="class-specified-value">16777310</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_LAUNCH7" class="dashAnchor">KEY_LAUNCH7</a></span>
+                =
+                <span class="class-specified-value">16777311</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_LAUNCH8" class="dashAnchor">KEY_LAUNCH8</a></span>
+                =
+                <span class="class-specified-value">16777312</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_LAUNCH9" class="dashAnchor">KEY_LAUNCH9</a></span>
+                =
+                <span class="class-specified-value">16777313</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_LAUNCHA" class="dashAnchor">KEY_LAUNCHA</a></span>
+                =
+                <span class="class-specified-value">16777314</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_LAUNCHB" class="dashAnchor">KEY_LAUNCHB</a></span>
+                =
+                <span class="class-specified-value">16777315</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_LAUNCHC" class="dashAnchor">KEY_LAUNCHC</a></span>
+                =
+                <span class="class-specified-value">16777316</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_LAUNCHD" class="dashAnchor">KEY_LAUNCHD</a></span>
+                =
+                <span class="class-specified-value">16777317</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_LAUNCHE" class="dashAnchor">KEY_LAUNCHE</a></span>
+                =
+                <span class="class-specified-value">16777318</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_LAUNCHF" class="dashAnchor">KEY_LAUNCHF</a></span>
+                =
+                <span class="class-specified-value">16777319</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_UNKNOWN" class="dashAnchor">KEY_UNKNOWN</a></span>
+                =
+                <span class="class-specified-value">33554431</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_SPACE" class="dashAnchor">KEY_SPACE</a></span>
+                =
+                <span class="class-specified-value">32</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_EXCLAM" class="dashAnchor">KEY_EXCLAM</a></span>
+                =
+                <span class="class-specified-value">33</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_QUOTEDBL" class="dashAnchor">KEY_QUOTEDBL</a></span>
+                =
+                <span class="class-specified-value">34</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_NUMBERSIGN" class="dashAnchor">KEY_NUMBERSIGN</a></span>
+                =
+                <span class="class-specified-value">35</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_DOLLAR" class="dashAnchor">KEY_DOLLAR</a></span>
+                =
+                <span class="class-specified-value">36</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_PERCENT" class="dashAnchor">KEY_PERCENT</a></span>
+                =
+                <span class="class-specified-value">37</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_AMPERSAND" class="dashAnchor">KEY_AMPERSAND</a></span>
+                =
+                <span class="class-specified-value">38</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_APOSTROPHE" class="dashAnchor">KEY_APOSTROPHE</a></span>
+                =
+                <span class="class-specified-value">39</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_PARENLEFT" class="dashAnchor">KEY_PARENLEFT</a></span>
+                =
+                <span class="class-specified-value">40</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_PARENRIGHT" class="dashAnchor">KEY_PARENRIGHT</a></span>
+                =
+                <span class="class-specified-value">41</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_ASTERISK" class="dashAnchor">KEY_ASTERISK</a></span>
+                =
+                <span class="class-specified-value">42</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_PLUS" class="dashAnchor">KEY_PLUS</a></span>
+                =
+                <span class="class-specified-value">43</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_COMMA" class="dashAnchor">KEY_COMMA</a></span>
+                =
+                <span class="class-specified-value">44</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_MINUS" class="dashAnchor">KEY_MINUS</a></span>
+                =
+                <span class="class-specified-value">45</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_PERIOD" class="dashAnchor">KEY_PERIOD</a></span>
+                =
+                <span class="class-specified-value">46</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_SLASH" class="dashAnchor">KEY_SLASH</a></span>
+                =
+                <span class="class-specified-value">47</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_0" class="dashAnchor">KEY_0</a></span>
+                =
+                <span class="class-specified-value">48</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_1" class="dashAnchor">KEY_1</a></span>
+                =
+                <span class="class-specified-value">49</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_2" class="dashAnchor">KEY_2</a></span>
+                =
+                <span class="class-specified-value">50</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_3" class="dashAnchor">KEY_3</a></span>
+                =
+                <span class="class-specified-value">51</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_4" class="dashAnchor">KEY_4</a></span>
+                =
+                <span class="class-specified-value">52</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_5" class="dashAnchor">KEY_5</a></span>
+                =
+                <span class="class-specified-value">53</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_6" class="dashAnchor">KEY_6</a></span>
+                =
+                <span class="class-specified-value">54</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_7" class="dashAnchor">KEY_7</a></span>
+                =
+                <span class="class-specified-value">55</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_8" class="dashAnchor">KEY_8</a></span>
+                =
+                <span class="class-specified-value">56</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_9" class="dashAnchor">KEY_9</a></span>
+                =
+                <span class="class-specified-value">57</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_COLON" class="dashAnchor">KEY_COLON</a></span>
+                =
+                <span class="class-specified-value">58</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_SEMICOLON" class="dashAnchor">KEY_SEMICOLON</a></span>
+                =
+                <span class="class-specified-value">59</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_LESS" class="dashAnchor">KEY_LESS</a></span>
+                =
+                <span class="class-specified-value">60</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_EQUAL" class="dashAnchor">KEY_EQUAL</a></span>
+                =
+                <span class="class-specified-value">61</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_GREATER" class="dashAnchor">KEY_GREATER</a></span>
+                =
+                <span class="class-specified-value">62</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_QUESTION" class="dashAnchor">KEY_QUESTION</a></span>
+                =
+                <span class="class-specified-value">63</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_AT" class="dashAnchor">KEY_AT</a></span>
+                =
+                <span class="class-specified-value">64</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_A" class="dashAnchor">KEY_A</a></span>
+                =
+                <span class="class-specified-value">65</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_B" class="dashAnchor">KEY_B</a></span>
+                =
+                <span class="class-specified-value">66</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_C" class="dashAnchor">KEY_C</a></span>
+                =
+                <span class="class-specified-value">67</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_D" class="dashAnchor">KEY_D</a></span>
+                =
+                <span class="class-specified-value">68</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_E" class="dashAnchor">KEY_E</a></span>
+                =
+                <span class="class-specified-value">69</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_F" class="dashAnchor">KEY_F</a></span>
+                =
+                <span class="class-specified-value">70</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_G" class="dashAnchor">KEY_G</a></span>
+                =
+                <span class="class-specified-value">71</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_H" class="dashAnchor">KEY_H</a></span>
+                =
+                <span class="class-specified-value">72</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_I" class="dashAnchor">KEY_I</a></span>
+                =
+                <span class="class-specified-value">73</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_J" class="dashAnchor">KEY_J</a></span>
+                =
+                <span class="class-specified-value">74</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_K" class="dashAnchor">KEY_K</a></span>
+                =
+                <span class="class-specified-value">75</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_L" class="dashAnchor">KEY_L</a></span>
+                =
+                <span class="class-specified-value">76</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_M" class="dashAnchor">KEY_M</a></span>
+                =
+                <span class="class-specified-value">77</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_N" class="dashAnchor">KEY_N</a></span>
+                =
+                <span class="class-specified-value">78</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_O" class="dashAnchor">KEY_O</a></span>
+                =
+                <span class="class-specified-value">79</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_P" class="dashAnchor">KEY_P</a></span>
+                =
+                <span class="class-specified-value">80</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_Q" class="dashAnchor">KEY_Q</a></span>
+                =
+                <span class="class-specified-value">81</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_R" class="dashAnchor">KEY_R</a></span>
+                =
+                <span class="class-specified-value">82</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_S" class="dashAnchor">KEY_S</a></span>
+                =
+                <span class="class-specified-value">83</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_T" class="dashAnchor">KEY_T</a></span>
+                =
+                <span class="class-specified-value">84</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_U" class="dashAnchor">KEY_U</a></span>
+                =
+                <span class="class-specified-value">85</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_V" class="dashAnchor">KEY_V</a></span>
+                =
+                <span class="class-specified-value">86</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_W" class="dashAnchor">KEY_W</a></span>
+                =
+                <span class="class-specified-value">87</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_X" class="dashAnchor">KEY_X</a></span>
+                =
+                <span class="class-specified-value">88</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_Y" class="dashAnchor">KEY_Y</a></span>
+                =
+                <span class="class-specified-value">89</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_Z" class="dashAnchor">KEY_Z</a></span>
+                =
+                <span class="class-specified-value">90</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_BRACKETLEFT" class="dashAnchor">KEY_BRACKETLEFT</a></span>
+                =
+                <span class="class-specified-value">91</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_BACKSLASH" class="dashAnchor">KEY_BACKSLASH</a></span>
+                =
+                <span class="class-specified-value">92</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_BRACKETRIGHT" class="dashAnchor">KEY_BRACKETRIGHT</a></span>
+                =
+                <span class="class-specified-value">93</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_ASCIICIRCUM" class="dashAnchor">KEY_ASCIICIRCUM</a></span>
+                =
+                <span class="class-specified-value">94</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_UNDERSCORE" class="dashAnchor">KEY_UNDERSCORE</a></span>
+                =
+                <span class="class-specified-value">95</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_QUOTELEFT" class="dashAnchor">KEY_QUOTELEFT</a></span>
+                =
+                <span class="class-specified-value">96</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_BRACELEFT" class="dashAnchor">KEY_BRACELEFT</a></span>
+                =
+                <span class="class-specified-value">123</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_BAR" class="dashAnchor">KEY_BAR</a></span>
+                =
+                <span class="class-specified-value">124</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_BRACERIGHT" class="dashAnchor">KEY_BRACERIGHT</a></span>
+                =
+                <span class="class-specified-value">125</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_ASCIITILDE" class="dashAnchor">KEY_ASCIITILDE</a></span>
+                =
+                <span class="class-specified-value">126</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_NOBREAKSPACE" class="dashAnchor">KEY_NOBREAKSPACE</a></span>
+                =
+                <span class="class-specified-value">160</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_EXCLAMDOWN" class="dashAnchor">KEY_EXCLAMDOWN</a></span>
+                =
+                <span class="class-specified-value">161</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_CENT" class="dashAnchor">KEY_CENT</a></span>
+                =
+                <span class="class-specified-value">162</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_STERLING" class="dashAnchor">KEY_STERLING</a></span>
+                =
+                <span class="class-specified-value">163</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_CURRENCY" class="dashAnchor">KEY_CURRENCY</a></span>
+                =
+                <span class="class-specified-value">164</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_YEN" class="dashAnchor">KEY_YEN</a></span>
+                =
+                <span class="class-specified-value">165</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_BROKENBAR" class="dashAnchor">KEY_BROKENBAR</a></span>
+                =
+                <span class="class-specified-value">166</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_SECTION" class="dashAnchor">KEY_SECTION</a></span>
+                =
+                <span class="class-specified-value">167</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_DIAERESIS" class="dashAnchor">KEY_DIAERESIS</a></span>
+                =
+                <span class="class-specified-value">168</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_COPYRIGHT" class="dashAnchor">KEY_COPYRIGHT</a></span>
+                =
+                <span class="class-specified-value">169</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_ORDFEMININE" class="dashAnchor">KEY_ORDFEMININE</a></span>
+                =
+                <span class="class-specified-value">170</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_GUILLEMOTLEFT" class="dashAnchor">KEY_GUILLEMOTLEFT</a></span>
+                =
+                <span class="class-specified-value">171</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_NOTSIGN" class="dashAnchor">KEY_NOTSIGN</a></span>
+                =
+                <span class="class-specified-value">172</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_HYPHEN" class="dashAnchor">KEY_HYPHEN</a></span>
+                =
+                <span class="class-specified-value">173</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_REGISTERED" class="dashAnchor">KEY_REGISTERED</a></span>
+                =
+                <span class="class-specified-value">174</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_MACRON" class="dashAnchor">KEY_MACRON</a></span>
+                =
+                <span class="class-specified-value">175</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_DEGREE" class="dashAnchor">KEY_DEGREE</a></span>
+                =
+                <span class="class-specified-value">176</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_PLUSMINUS" class="dashAnchor">KEY_PLUSMINUS</a></span>
+                =
+                <span class="class-specified-value">177</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_TWOSUPERIOR" class="dashAnchor">KEY_TWOSUPERIOR</a></span>
+                =
+                <span class="class-specified-value">178</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_THREESUPERIOR" class="dashAnchor">KEY_THREESUPERIOR</a></span>
+                =
+                <span class="class-specified-value">179</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_ACUTE" class="dashAnchor">KEY_ACUTE</a></span>
+                =
+                <span class="class-specified-value">180</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_MU" class="dashAnchor">KEY_MU</a></span>
+                =
+                <span class="class-specified-value">181</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_PARAGRAPH" class="dashAnchor">KEY_PARAGRAPH</a></span>
+                =
+                <span class="class-specified-value">182</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_PERIODCENTERED" class="dashAnchor">KEY_PERIODCENTERED</a></span>
+                =
+                <span class="class-specified-value">183</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_CEDILLA" class="dashAnchor">KEY_CEDILLA</a></span>
+                =
+                <span class="class-specified-value">184</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_ONESUPERIOR" class="dashAnchor">KEY_ONESUPERIOR</a></span>
+                =
+                <span class="class-specified-value">185</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_MASCULINE" class="dashAnchor">KEY_MASCULINE</a></span>
+                =
+                <span class="class-specified-value">186</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_GUILLEMOTRIGHT" class="dashAnchor">KEY_GUILLEMOTRIGHT</a></span>
+                =
+                <span class="class-specified-value">187</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_ONEQUARTER" class="dashAnchor">KEY_ONEQUARTER</a></span>
+                =
+                <span class="class-specified-value">188</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_ONEHALF" class="dashAnchor">KEY_ONEHALF</a></span>
+                =
+                <span class="class-specified-value">189</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_THREEQUARTERS" class="dashAnchor">KEY_THREEQUARTERS</a></span>
+                =
+                <span class="class-specified-value">190</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_QUESTIONDOWN" class="dashAnchor">KEY_QUESTIONDOWN</a></span>
+                =
+                <span class="class-specified-value">191</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_AGRAVE" class="dashAnchor">KEY_AGRAVE</a></span>
+                =
+                <span class="class-specified-value">192</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_AACUTE" class="dashAnchor">KEY_AACUTE</a></span>
+                =
+                <span class="class-specified-value">193</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_ACIRCUMFLEX" class="dashAnchor">KEY_ACIRCUMFLEX</a></span>
+                =
+                <span class="class-specified-value">194</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_ATILDE" class="dashAnchor">KEY_ATILDE</a></span>
+                =
+                <span class="class-specified-value">195</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_ADIAERESIS" class="dashAnchor">KEY_ADIAERESIS</a></span>
+                =
+                <span class="class-specified-value">196</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_ARING" class="dashAnchor">KEY_ARING</a></span>
+                =
+                <span class="class-specified-value">197</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_AE" class="dashAnchor">KEY_AE</a></span>
+                =
+                <span class="class-specified-value">198</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_CCEDILLA" class="dashAnchor">KEY_CCEDILLA</a></span>
+                =
+                <span class="class-specified-value">199</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_EGRAVE" class="dashAnchor">KEY_EGRAVE</a></span>
+                =
+                <span class="class-specified-value">200</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_EACUTE" class="dashAnchor">KEY_EACUTE</a></span>
+                =
+                <span class="class-specified-value">201</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_ECIRCUMFLEX" class="dashAnchor">KEY_ECIRCUMFLEX</a></span>
+                =
+                <span class="class-specified-value">202</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_EDIAERESIS" class="dashAnchor">KEY_EDIAERESIS</a></span>
+                =
+                <span class="class-specified-value">203</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_IGRAVE" class="dashAnchor">KEY_IGRAVE</a></span>
+                =
+                <span class="class-specified-value">204</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_IACUTE" class="dashAnchor">KEY_IACUTE</a></span>
+                =
+                <span class="class-specified-value">205</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_ICIRCUMFLEX" class="dashAnchor">KEY_ICIRCUMFLEX</a></span>
+                =
+                <span class="class-specified-value">206</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_IDIAERESIS" class="dashAnchor">KEY_IDIAERESIS</a></span>
+                =
+                <span class="class-specified-value">207</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_ETH" class="dashAnchor">KEY_ETH</a></span>
+                =
+                <span class="class-specified-value">208</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_NTILDE" class="dashAnchor">KEY_NTILDE</a></span>
+                =
+                <span class="class-specified-value">209</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_OGRAVE" class="dashAnchor">KEY_OGRAVE</a></span>
+                =
+                <span class="class-specified-value">210</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_OACUTE" class="dashAnchor">KEY_OACUTE</a></span>
+                =
+                <span class="class-specified-value">211</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_OCIRCUMFLEX" class="dashAnchor">KEY_OCIRCUMFLEX</a></span>
+                =
+                <span class="class-specified-value">212</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_OTILDE" class="dashAnchor">KEY_OTILDE</a></span>
+                =
+                <span class="class-specified-value">213</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_ODIAERESIS" class="dashAnchor">KEY_ODIAERESIS</a></span>
+                =
+                <span class="class-specified-value">214</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_MULTIPLY" class="dashAnchor">KEY_MULTIPLY</a></span>
+                =
+                <span class="class-specified-value">215</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_OOBLIQUE" class="dashAnchor">KEY_OOBLIQUE</a></span>
+                =
+                <span class="class-specified-value">216</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_UGRAVE" class="dashAnchor">KEY_UGRAVE</a></span>
+                =
+                <span class="class-specified-value">217</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_UACUTE" class="dashAnchor">KEY_UACUTE</a></span>
+                =
+                <span class="class-specified-value">218</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_UCIRCUMFLEX" class="dashAnchor">KEY_UCIRCUMFLEX</a></span>
+                =
+                <span class="class-specified-value">219</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_UDIAERESIS" class="dashAnchor">KEY_UDIAERESIS</a></span>
+                =
+                <span class="class-specified-value">220</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_YACUTE" class="dashAnchor">KEY_YACUTE</a></span>
+                =
+                <span class="class-specified-value">221</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_THORN" class="dashAnchor">KEY_THORN</a></span>
+                =
+                <span class="class-specified-value">222</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_SSHARP" class="dashAnchor">KEY_SSHARP</a></span>
+                =
+                <span class="class-specified-value">223</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_DIVISION" class="dashAnchor">KEY_DIVISION</a></span>
+                =
+                <span class="class-specified-value">247</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_YDIAERESIS" class="dashAnchor">KEY_YDIAERESIS</a></span>
+                =
+                <span class="class-specified-value">255</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_CODE_MASK" class="dashAnchor">KEY_CODE_MASK</a></span>
+                =
+                <span class="class-specified-value">33554431</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_MODIFIER_MASK" class="dashAnchor">KEY_MODIFIER_MASK</a></span>
+                =
+                <span class="class-specified-value">-16777216</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_MASK_SHIFT" class="dashAnchor">KEY_MASK_SHIFT</a></span>
+                =
+                <span class="class-specified-value">33554432</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_MASK_ALT" class="dashAnchor">KEY_MASK_ALT</a></span>
+                =
+                <span class="class-specified-value">67108864</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_MASK_META" class="dashAnchor">KEY_MASK_META</a></span>
+                =
+                <span class="class-specified-value">134217728</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_MASK_CTRL" class="dashAnchor">KEY_MASK_CTRL</a></span>
+                =
+                <span class="class-specified-value">268435456</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_MASK_KPAD" class="dashAnchor">KEY_MASK_KPAD</a></span>
+                =
+                <span class="class-specified-value">536870912</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/KEY_MASK_GROUP_SWITCH" class="dashAnchor">KEY_MASK_GROUP_SWITCH</a></span>
+                =
+                <span class="class-specified-value">1073741824</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/BUTTON_LEFT" class="dashAnchor">BUTTON_LEFT</a></span>
+                =
+                <span class="class-specified-value">1</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/BUTTON_RIGHT" class="dashAnchor">BUTTON_RIGHT</a></span>
+                =
+                <span class="class-specified-value">2</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/BUTTON_MIDDLE" class="dashAnchor">BUTTON_MIDDLE</a></span>
+                =
+                <span class="class-specified-value">3</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/BUTTON_WHEEL_UP" class="dashAnchor">BUTTON_WHEEL_UP</a></span>
+                =
+                <span class="class-specified-value">4</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/BUTTON_WHEEL_DOWN" class="dashAnchor">BUTTON_WHEEL_DOWN</a></span>
+                =
+                <span class="class-specified-value">5</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/BUTTON_MASK_LEFT" class="dashAnchor">BUTTON_MASK_LEFT</a></span>
+                =
+                <span class="class-specified-value">1</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/BUTTON_MASK_RIGHT" class="dashAnchor">BUTTON_MASK_RIGHT</a></span>
+                =
+                <span class="class-specified-value">2</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/BUTTON_MASK_MIDDLE" class="dashAnchor">BUTTON_MASK_MIDDLE</a></span>
+                =
+                <span class="class-specified-value">4</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_BUTTON_0" class="dashAnchor">JOY_BUTTON_0</a></span>
+                =
+                <span class="class-specified-value">0</span>
+                <div class="class-description">
+                     Joystick Button 0 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_BUTTON_1" class="dashAnchor">JOY_BUTTON_1</a></span>
+                =
+                <span class="class-specified-value">1</span>
+                <div class="class-description">
+                     Joystick Button 1 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_BUTTON_2" class="dashAnchor">JOY_BUTTON_2</a></span>
+                =
+                <span class="class-specified-value">2</span>
+                <div class="class-description">
+                     Joystick Button 2 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_BUTTON_3" class="dashAnchor">JOY_BUTTON_3</a></span>
+                =
+                <span class="class-specified-value">3</span>
+                <div class="class-description">
+                     Joystick Button 3 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_BUTTON_4" class="dashAnchor">JOY_BUTTON_4</a></span>
+                =
+                <span class="class-specified-value">4</span>
+                <div class="class-description">
+                     Joystick Button 4 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_BUTTON_5" class="dashAnchor">JOY_BUTTON_5</a></span>
+                =
+                <span class="class-specified-value">5</span>
+                <div class="class-description">
+                     Joystick Button 5 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_BUTTON_6" class="dashAnchor">JOY_BUTTON_6</a></span>
+                =
+                <span class="class-specified-value">6</span>
+                <div class="class-description">
+                     Joystick Button 6 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_BUTTON_7" class="dashAnchor">JOY_BUTTON_7</a></span>
+                =
+                <span class="class-specified-value">7</span>
+                <div class="class-description">
+                     Joystick Button 7 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_BUTTON_8" class="dashAnchor">JOY_BUTTON_8</a></span>
+                =
+                <span class="class-specified-value">8</span>
+                <div class="class-description">
+                     Joystick Button 8 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_BUTTON_9" class="dashAnchor">JOY_BUTTON_9</a></span>
+                =
+                <span class="class-specified-value">9</span>
+                <div class="class-description">
+                     Joystick Button 9 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_BUTTON_10" class="dashAnchor">JOY_BUTTON_10</a></span>
+                =
+                <span class="class-specified-value">10</span>
+                <div class="class-description">
+                     Joystick Button 10 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_BUTTON_11" class="dashAnchor">JOY_BUTTON_11</a></span>
+                =
+                <span class="class-specified-value">11</span>
+                <div class="class-description">
+                     Joystick Button 11 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_BUTTON_12" class="dashAnchor">JOY_BUTTON_12</a></span>
+                =
+                <span class="class-specified-value">12</span>
+                <div class="class-description">
+                     Joystick Button 12 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_BUTTON_13" class="dashAnchor">JOY_BUTTON_13</a></span>
+                =
+                <span class="class-specified-value">13</span>
+                <div class="class-description">
+                     Joystick Button 13 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_BUTTON_14" class="dashAnchor">JOY_BUTTON_14</a></span>
+                =
+                <span class="class-specified-value">14</span>
+                <div class="class-description">
+                     Joystick Button 14 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_BUTTON_15" class="dashAnchor">JOY_BUTTON_15</a></span>
+                =
+                <span class="class-specified-value">15</span>
+                <div class="class-description">
+                     Joystick Button 15 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_BUTTON_MAX" class="dashAnchor">JOY_BUTTON_MAX</a></span>
+                =
+                <span class="class-specified-value">16</span>
+                <div class="class-description">
+                     Joystick Button 16 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_SNES_A" class="dashAnchor">JOY_SNES_A</a></span>
+                =
+                <span class="class-specified-value">1</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_SNES_B" class="dashAnchor">JOY_SNES_B</a></span>
+                =
+                <span class="class-specified-value">0</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_SNES_X" class="dashAnchor">JOY_SNES_X</a></span>
+                =
+                <span class="class-specified-value">3</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_SNES_Y" class="dashAnchor">JOY_SNES_Y</a></span>
+                =
+                <span class="class-specified-value">2</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_SONY_CIRCLE" class="dashAnchor">JOY_SONY_CIRCLE</a></span>
+                =
+                <span class="class-specified-value">1</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_SONY_X" class="dashAnchor">JOY_SONY_X</a></span>
+                =
+                <span class="class-specified-value">0</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_SONY_SQUARE" class="dashAnchor">JOY_SONY_SQUARE</a></span>
+                =
+                <span class="class-specified-value">2</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_SONY_TRIANGLE" class="dashAnchor">JOY_SONY_TRIANGLE</a></span>
+                =
+                <span class="class-specified-value">3</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_SEGA_B" class="dashAnchor">JOY_SEGA_B</a></span>
+                =
+                <span class="class-specified-value">1</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_SEGA_A" class="dashAnchor">JOY_SEGA_A</a></span>
+                =
+                <span class="class-specified-value">0</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_SEGA_X" class="dashAnchor">JOY_SEGA_X</a></span>
+                =
+                <span class="class-specified-value">2</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_SEGA_Y" class="dashAnchor">JOY_SEGA_Y</a></span>
+                =
+                <span class="class-specified-value">3</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_XBOX_B" class="dashAnchor">JOY_XBOX_B</a></span>
+                =
+                <span class="class-specified-value">1</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_XBOX_A" class="dashAnchor">JOY_XBOX_A</a></span>
+                =
+                <span class="class-specified-value">0</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_XBOX_X" class="dashAnchor">JOY_XBOX_X</a></span>
+                =
+                <span class="class-specified-value">2</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_XBOX_Y" class="dashAnchor">JOY_XBOX_Y</a></span>
+                =
+                <span class="class-specified-value">3</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_DS_A" class="dashAnchor">JOY_DS_A</a></span>
+                =
+                <span class="class-specified-value">1</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_DS_B" class="dashAnchor">JOY_DS_B</a></span>
+                =
+                <span class="class-specified-value">0</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_DS_X" class="dashAnchor">JOY_DS_X</a></span>
+                =
+                <span class="class-specified-value">3</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_DS_Y" class="dashAnchor">JOY_DS_Y</a></span>
+                =
+                <span class="class-specified-value">2</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_SELECT" class="dashAnchor">JOY_SELECT</a></span>
+                =
+                <span class="class-specified-value">10</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_START" class="dashAnchor">JOY_START</a></span>
+                =
+                <span class="class-specified-value">11</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_DPAD_UP" class="dashAnchor">JOY_DPAD_UP</a></span>
+                =
+                <span class="class-specified-value">12</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_DPAD_DOWN" class="dashAnchor">JOY_DPAD_DOWN</a></span>
+                =
+                <span class="class-specified-value">13</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_DPAD_LEFT" class="dashAnchor">JOY_DPAD_LEFT</a></span>
+                =
+                <span class="class-specified-value">14</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_DPAD_RIGHT" class="dashAnchor">JOY_DPAD_RIGHT</a></span>
+                =
+                <span class="class-specified-value">15</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_L" class="dashAnchor">JOY_L</a></span>
+                =
+                <span class="class-specified-value">4</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_L2" class="dashAnchor">JOY_L2</a></span>
+                =
+                <span class="class-specified-value">6</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_L3" class="dashAnchor">JOY_L3</a></span>
+                =
+                <span class="class-specified-value">8</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_R" class="dashAnchor">JOY_R</a></span>
+                =
+                <span class="class-specified-value">5</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_R2" class="dashAnchor">JOY_R2</a></span>
+                =
+                <span class="class-specified-value">7</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_R3" class="dashAnchor">JOY_R3</a></span>
+                =
+                <span class="class-specified-value">9</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_AXIS_0" class="dashAnchor">JOY_AXIS_0</a></span>
+                =
+                <span class="class-specified-value">0</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_AXIS_1" class="dashAnchor">JOY_AXIS_1</a></span>
+                =
+                <span class="class-specified-value">1</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_AXIS_2" class="dashAnchor">JOY_AXIS_2</a></span>
+                =
+                <span class="class-specified-value">2</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_AXIS_3" class="dashAnchor">JOY_AXIS_3</a></span>
+                =
+                <span class="class-specified-value">3</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_AXIS_4" class="dashAnchor">JOY_AXIS_4</a></span>
+                =
+                <span class="class-specified-value">4</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_AXIS_5" class="dashAnchor">JOY_AXIS_5</a></span>
+                =
+                <span class="class-specified-value">5</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_AXIS_6" class="dashAnchor">JOY_AXIS_6</a></span>
+                =
+                <span class="class-specified-value">6</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_AXIS_7" class="dashAnchor">JOY_AXIS_7</a></span>
+                =
+                <span class="class-specified-value">7</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_AXIS_MAX" class="dashAnchor">JOY_AXIS_MAX</a></span>
+                =
+                <span class="class-specified-value">8</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_ANALOG_0_X" class="dashAnchor">JOY_ANALOG_0_X</a></span>
+                =
+                <span class="class-specified-value">0</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_ANALOG_0_Y" class="dashAnchor">JOY_ANALOG_0_Y</a></span>
+                =
+                <span class="class-specified-value">1</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_ANALOG_1_X" class="dashAnchor">JOY_ANALOG_1_X</a></span>
+                =
+                <span class="class-specified-value">2</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_ANALOG_1_Y" class="dashAnchor">JOY_ANALOG_1_Y</a></span>
+                =
+                <span class="class-specified-value">3</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_ANALOG_2_X" class="dashAnchor">JOY_ANALOG_2_X</a></span>
+                =
+                <span class="class-specified-value">4</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/JOY_ANALOG_2_Y" class="dashAnchor">JOY_ANALOG_2_Y</a></span>
+                =
+                <span class="class-specified-value">5</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/OK" class="dashAnchor">OK</a></span>
+                =
+                <span class="class-specified-value">0</span>
+                <div class="class-description">
+                     Functions that return [Error] return OK when everything went ok. Most functions don&#x27;t return error anyway and/or just print errors to stdout. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/FAILED" class="dashAnchor">FAILED</a></span>
+                =
+                <span class="class-specified-value">1</span>
+                <div class="class-description">
+                     Generic fail return error. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_UNAVAILABLE" class="dashAnchor">ERR_UNAVAILABLE</a></span>
+                =
+                <span class="class-specified-value">2</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_UNCONFIGURED" class="dashAnchor">ERR_UNCONFIGURED</a></span>
+                =
+                <span class="class-specified-value">3</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_UNAUTHORIZED" class="dashAnchor">ERR_UNAUTHORIZED</a></span>
+                =
+                <span class="class-specified-value">4</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_PARAMETER_RANGE_ERROR" class="dashAnchor">ERR_PARAMETER_RANGE_ERROR</a></span>
+                =
+                <span class="class-specified-value">5</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_OUT_OF_MEMORY" class="dashAnchor">ERR_OUT_OF_MEMORY</a></span>
+                =
+                <span class="class-specified-value">6</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_FILE_NOT_FOUND" class="dashAnchor">ERR_FILE_NOT_FOUND</a></span>
+                =
+                <span class="class-specified-value">7</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_FILE_BAD_DRIVE" class="dashAnchor">ERR_FILE_BAD_DRIVE</a></span>
+                =
+                <span class="class-specified-value">8</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_FILE_BAD_PATH" class="dashAnchor">ERR_FILE_BAD_PATH</a></span>
+                =
+                <span class="class-specified-value">9</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_FILE_NO_PERMISSION" class="dashAnchor">ERR_FILE_NO_PERMISSION</a></span>
+                =
+                <span class="class-specified-value">10</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_FILE_ALREADY_IN_USE" class="dashAnchor">ERR_FILE_ALREADY_IN_USE</a></span>
+                =
+                <span class="class-specified-value">11</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_FILE_CANT_OPEN" class="dashAnchor">ERR_FILE_CANT_OPEN</a></span>
+                =
+                <span class="class-specified-value">12</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_FILE_CANT_WRITE" class="dashAnchor">ERR_FILE_CANT_WRITE</a></span>
+                =
+                <span class="class-specified-value">13</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_FILE_CANT_READ" class="dashAnchor">ERR_FILE_CANT_READ</a></span>
+                =
+                <span class="class-specified-value">14</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_FILE_UNRECOGNIZED" class="dashAnchor">ERR_FILE_UNRECOGNIZED</a></span>
+                =
+                <span class="class-specified-value">15</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_FILE_CORRUPT" class="dashAnchor">ERR_FILE_CORRUPT</a></span>
+                =
+                <span class="class-specified-value">16</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_FILE_EOF" class="dashAnchor">ERR_FILE_EOF</a></span>
+                =
+                <span class="class-specified-value">17</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_CANT_OPEN" class="dashAnchor">ERR_CANT_OPEN</a></span>
+                =
+                <span class="class-specified-value">18</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_CANT_CREATE" class="dashAnchor">ERR_CANT_CREATE</a></span>
+                =
+                <span class="class-specified-value">19</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERROR_QUERY_FAILED" class="dashAnchor">ERROR_QUERY_FAILED</a></span>
+                =
+                <span class="class-specified-value">20</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_ALREADY_IN_USE" class="dashAnchor">ERR_ALREADY_IN_USE</a></span>
+                =
+                <span class="class-specified-value">21</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_LOCKED" class="dashAnchor">ERR_LOCKED</a></span>
+                =
+                <span class="class-specified-value">22</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_TIMEOUT" class="dashAnchor">ERR_TIMEOUT</a></span>
+                =
+                <span class="class-specified-value">23</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_CANT_AQUIRE_RESOURCE" class="dashAnchor">ERR_CANT_AQUIRE_RESOURCE</a></span>
+                =
+                <span class="class-specified-value">27</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_INVALID_DATA" class="dashAnchor">ERR_INVALID_DATA</a></span>
+                =
+                <span class="class-specified-value">29</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_INVALID_PARAMETER" class="dashAnchor">ERR_INVALID_PARAMETER</a></span>
+                =
+                <span class="class-specified-value">30</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_ALREADY_EXISTS" class="dashAnchor">ERR_ALREADY_EXISTS</a></span>
+                =
+                <span class="class-specified-value">31</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_DOES_NOT_EXIST" class="dashAnchor">ERR_DOES_NOT_EXIST</a></span>
+                =
+                <span class="class-specified-value">32</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_DATABASE_CANT_READ" class="dashAnchor">ERR_DATABASE_CANT_READ</a></span>
+                =
+                <span class="class-specified-value">33</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_DATABASE_CANT_WRITE" class="dashAnchor">ERR_DATABASE_CANT_WRITE</a></span>
+                =
+                <span class="class-specified-value">34</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_COMPILATION_FAILED" class="dashAnchor">ERR_COMPILATION_FAILED</a></span>
+                =
+                <span class="class-specified-value">35</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_METHOD_NOT_FOUND" class="dashAnchor">ERR_METHOD_NOT_FOUND</a></span>
+                =
+                <span class="class-specified-value">36</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_LINK_FAILED" class="dashAnchor">ERR_LINK_FAILED</a></span>
+                =
+                <span class="class-specified-value">37</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_SCRIPT_FAILED" class="dashAnchor">ERR_SCRIPT_FAILED</a></span>
+                =
+                <span class="class-specified-value">38</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_CYCLIC_LINK" class="dashAnchor">ERR_CYCLIC_LINK</a></span>
+                =
+                <span class="class-specified-value">39</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_BUSY" class="dashAnchor">ERR_BUSY</a></span>
+                =
+                <span class="class-specified-value">43</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_HELP" class="dashAnchor">ERR_HELP</a></span>
+                =
+                <span class="class-specified-value">45</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_BUG" class="dashAnchor">ERR_BUG</a></span>
+                =
+                <span class="class-specified-value">46</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ERR_WTF" class="dashAnchor">ERR_WTF</a></span>
+                =
+                <span class="class-specified-value">48</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/PROPERTY_HINT_NONE" class="dashAnchor">PROPERTY_HINT_NONE</a></span>
+                =
+                <span class="class-specified-value">0</span>
+                <div class="class-description">
+                     No hint for edited property. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/PROPERTY_HINT_RANGE" class="dashAnchor">PROPERTY_HINT_RANGE</a></span>
+                =
+                <span class="class-specified-value">1</span>
+                <div class="class-description">
+                     Hints that the string is a range, defined as &quot;min,max&quot; or &quot;min,max,step&quot;. This is valid for integers and floats. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/PROPERTY_HINT_EXP_RANGE" class="dashAnchor">PROPERTY_HINT_EXP_RANGE</a></span>
+                =
+                <span class="class-specified-value">2</span>
+                <div class="class-description">
+                     Hints that the string is an exponential range, defined as &quot;min,max&quot; or &quot;min,max,step&quot;. This is valid for integers and floats. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/PROPERTY_HINT_ENUM" class="dashAnchor">PROPERTY_HINT_ENUM</a></span>
+                =
+                <span class="class-specified-value">3</span>
+                <div class="class-description">
+                     Property hint for an enumerated value, like &quot;Hello,Something,Else&quot;. This is valid for integer, float and string properties. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/PROPERTY_HINT_EXP_EASING" class="dashAnchor">PROPERTY_HINT_EXP_EASING</a></span>
+                =
+                <span class="class-specified-value">4</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/PROPERTY_HINT_LENGTH" class="dashAnchor">PROPERTY_HINT_LENGTH</a></span>
+                =
+                <span class="class-specified-value">5</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/PROPERTY_HINT_KEY_ACCEL" class="dashAnchor">PROPERTY_HINT_KEY_ACCEL</a></span>
+                =
+                <span class="class-specified-value">6</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/PROPERTY_HINT_FLAGS" class="dashAnchor">PROPERTY_HINT_FLAGS</a></span>
+                =
+                <span class="class-specified-value">7</span>
+                <div class="class-description">
+                     Property hint for a bitmask description, for bits 0,1,2,3 and 5 the hint would be like &quot;Bit0,Bit1,Bit2,Bit3,,Bit5&quot;. Valid only for integers. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/PROPERTY_HINT_ALL_FLAGS" class="dashAnchor">PROPERTY_HINT_ALL_FLAGS</a></span>
+                =
+                <span class="class-specified-value">8</span>
+                <div class="class-description">
+                     Property hint for a bitmask description that covers all 32 bits. Valid only for integers. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/PROPERTY_HINT_FILE" class="dashAnchor">PROPERTY_HINT_FILE</a></span>
+                =
+                <span class="class-specified-value">9</span>
+                <div class="class-description">
+                     String property is a file (so pop up a file dialog when edited). Hint string can be a set of wildcards like &quot;*.doc&quot;. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/PROPERTY_HINT_DIR" class="dashAnchor">PROPERTY_HINT_DIR</a></span>
+                =
+                <span class="class-specified-value">10</span>
+                <div class="class-description">
+                     String property is a directory (so pop up a file dialog when edited). 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/PROPERTY_HINT_GLOBAL_FILE" class="dashAnchor">PROPERTY_HINT_GLOBAL_FILE</a></span>
+                =
+                <span class="class-specified-value">11</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/PROPERTY_HINT_GLOBAL_DIR" class="dashAnchor">PROPERTY_HINT_GLOBAL_DIR</a></span>
+                =
+                <span class="class-specified-value">12</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/PROPERTY_HINT_RESOURCE_TYPE" class="dashAnchor">PROPERTY_HINT_RESOURCE_TYPE</a></span>
+                =
+                <span class="class-specified-value">13</span>
+                <div class="class-description">
+                     String property is a resource, so open the resource popup menu when edited. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/PROPERTY_HINT_MULTILINE_TEXT" class="dashAnchor">PROPERTY_HINT_MULTILINE_TEXT</a></span>
+                =
+                <span class="class-specified-value">14</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/PROPERTY_HINT_COLOR_NO_ALPHA" class="dashAnchor">PROPERTY_HINT_COLOR_NO_ALPHA</a></span>
+                =
+                <span class="class-specified-value">15</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/PROPERTY_HINT_IMAGE_COMPRESS_LOSSY" class="dashAnchor">PROPERTY_HINT_IMAGE_COMPRESS_LOSSY</a></span>
+                =
+                <span class="class-specified-value">16</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/PROPERTY_HINT_IMAGE_COMPRESS_LOSSLESS" class="dashAnchor">PROPERTY_HINT_IMAGE_COMPRESS_LOSSLESS</a></span>
+                =
+                <span class="class-specified-value">17</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/PROPERTY_USAGE_STORAGE" class="dashAnchor">PROPERTY_USAGE_STORAGE</a></span>
+                =
+                <span class="class-specified-value">1</span>
+                <div class="class-description">
+                     Property will be used as storage (default). 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/PROPERTY_USAGE_EDITOR" class="dashAnchor">PROPERTY_USAGE_EDITOR</a></span>
+                =
+                <span class="class-specified-value">2</span>
+                <div class="class-description">
+                     Property will be visible in editor (default). 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/PROPERTY_USAGE_NETWORK" class="dashAnchor">PROPERTY_USAGE_NETWORK</a></span>
+                =
+                <span class="class-specified-value">4</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/PROPERTY_USAGE_DEFAULT" class="dashAnchor">PROPERTY_USAGE_DEFAULT</a></span>
+                =
+                <span class="class-specified-value">7</span>
+                <div class="class-description">
+                     Default usage (storage and editor). 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/TYPE_NIL" class="dashAnchor">TYPE_NIL</a></span>
+                =
+                <span class="class-specified-value">0</span>
+                <div class="class-description">
+                     Variable is of type nil (only applied for null). 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/TYPE_BOOL" class="dashAnchor">TYPE_BOOL</a></span>
+                =
+                <span class="class-specified-value">1</span>
+                <div class="class-description">
+                     Variable is of type bool. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/TYPE_INT" class="dashAnchor">TYPE_INT</a></span>
+                =
+                <span class="class-specified-value">2</span>
+                <div class="class-description">
+                     Variable is of type integer. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/TYPE_REAL" class="dashAnchor">TYPE_REAL</a></span>
+                =
+                <span class="class-specified-value">3</span>
+                <div class="class-description">
+                     Variable is of type float/real. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/TYPE_STRING" class="dashAnchor">TYPE_STRING</a></span>
+                =
+                <span class="class-specified-value">4</span>
+                <div class="class-description">
+                     Variable is of type [String]. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/TYPE_VECTOR2" class="dashAnchor">TYPE_VECTOR2</a></span>
+                =
+                <span class="class-specified-value">5</span>
+                <div class="class-description">
+                     Variable is of type [Vector2]. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/TYPE_RECT2" class="dashAnchor">TYPE_RECT2</a></span>
+                =
+                <span class="class-specified-value">6</span>
+                <div class="class-description">
+                     Variable is of type [Rect2]. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/TYPE_VECTOR3" class="dashAnchor">TYPE_VECTOR3</a></span>
+                =
+                <span class="class-specified-value">7</span>
+                <div class="class-description">
+                     Variable is of type [Vector3]. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/TYPE_MATRIX32" class="dashAnchor">TYPE_MATRIX32</a></span>
+                =
+                <span class="class-specified-value">8</span>
+                <div class="class-description">
+                     Variable is of type [Matrix32]. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/TYPE_PLANE" class="dashAnchor">TYPE_PLANE</a></span>
+                =
+                <span class="class-specified-value">9</span>
+                <div class="class-description">
+                     Variable is of type [Plane]. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/TYPE_QUAT" class="dashAnchor">TYPE_QUAT</a></span>
+                =
+                <span class="class-specified-value">10</span>
+                <div class="class-description">
+                     Variable is of type [Quat]. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/TYPE_AABB" class="dashAnchor">TYPE_AABB</a></span>
+                =
+                <span class="class-specified-value">11</span>
+                <div class="class-description">
+                     Variable is of type [AABB]. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/TYPE_MATRIX3" class="dashAnchor">TYPE_MATRIX3</a></span>
+                =
+                <span class="class-specified-value">12</span>
+                <div class="class-description">
+                     Variable is fo type [Matrix3]. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/TYPE_TRANSFORM" class="dashAnchor">TYPE_TRANSFORM</a></span>
+                =
+                <span class="class-specified-value">13</span>
+                <div class="class-description">
+                     Variable is fo type [Transform]. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/TYPE_COLOR" class="dashAnchor">TYPE_COLOR</a></span>
+                =
+                <span class="class-specified-value">14</span>
+                <div class="class-description">
+                     Variable is fo type [Color]. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/TYPE_IMAGE" class="dashAnchor">TYPE_IMAGE</a></span>
+                =
+                <span class="class-specified-value">15</span>
+                <div class="class-description">
+                     Variable is fo type [Image]. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/TYPE_NODE_PATH" class="dashAnchor">TYPE_NODE_PATH</a></span>
+                =
+                <span class="class-specified-value">16</span>
+                <div class="class-description">
+                     Variable is fo type [NodePath]. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/TYPE_RID" class="dashAnchor">TYPE_RID</a></span>
+                =
+                <span class="class-specified-value">17</span>
+                <div class="class-description">
+                     Variable is fo type [RID]. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/TYPE_OBJECT" class="dashAnchor">TYPE_OBJECT</a></span>
+                =
+                <span class="class-specified-value">18</span>
+                <div class="class-description">
+                     Variable is fo type [Object]. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/TYPE_INPUT_EVENT" class="dashAnchor">TYPE_INPUT_EVENT</a></span>
+                =
+                <span class="class-specified-value">19</span>
+                <div class="class-description">
+                     Variable is fo type [InputEvent]. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/TYPE_DICTIONARY" class="dashAnchor">TYPE_DICTIONARY</a></span>
+                =
+                <span class="class-specified-value">20</span>
+                <div class="class-description">
+                     Variable is fo type [Dictionary]. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/TYPE_ARRAY" class="dashAnchor">TYPE_ARRAY</a></span>
+                =
+                <span class="class-specified-value">21</span>
+                <div class="class-description">
+                     Variable is fo type [Array]. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/TYPE_RAW_ARRAY" class="dashAnchor">TYPE_RAW_ARRAY</a></span>
+                =
+                <span class="class-specified-value">22</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/TYPE_INT_ARRAY" class="dashAnchor">TYPE_INT_ARRAY</a></span>
+                =
+                <span class="class-specified-value">23</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/TYPE_REAL_ARRAY" class="dashAnchor">TYPE_REAL_ARRAY</a></span>
+                =
+                <span class="class-specified-value">24</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/TYPE_STRING_ARRAY" class="dashAnchor">TYPE_STRING_ARRAY</a></span>
+                =
+                <span class="class-specified-value">25</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/TYPE_VECTOR2_ARRAY" class="dashAnchor">TYPE_VECTOR2_ARRAY</a></span>
+                =
+                <span class="class-specified-value">26</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/TYPE_VECTOR3_ARRAY" class="dashAnchor">TYPE_VECTOR3_ARRAY</a></span>
+                =
+                <span class="class-specified-value">27</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/TYPE_COLOR_ARRAY" class="dashAnchor">TYPE_COLOR_ARRAY</a></span>
+                =
+                <span class="class-specified-value">28</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/TYPE_MAX" class="dashAnchor">TYPE_MAX</a></span>
+                =
+                <span class="class-specified-value">29</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+        </div> <!-- End div.class-constants -->
+
+
+        <div class="class-members">
+            <h2 class="class-title">Members</h2>
+            <div class="class-member">
+                <a href="Performance.html" class="class-specified-type">Performance</a>
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Variable/Performance" class="dashAnchor">Performance</a></span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-member">
+                <a href="Globals.html" class="class-specified-type">Globals</a>
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Variable/Globals" class="dashAnchor">Globals</a></span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-member">
+                <a href="IP.html" class="class-specified-type">IP</a>
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Variable/IP" class="dashAnchor">IP</a></span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-member">
+                <a href="Geometry.html" class="class-specified-type">Geometry</a>
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Variable/Geometry" class="dashAnchor">Geometry</a></span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-member">
+                <a href="ResourceLoader.html" class="class-specified-type">ResourceLoader</a>
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Variable/ResourceLoader" class="dashAnchor">ResourceLoader</a></span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-member">
+                <a href="ResourceSaver.html" class="class-specified-type">ResourceSaver</a>
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Variable/ResourceSaver" class="dashAnchor">ResourceSaver</a></span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-member">
+                <a href="PathRemap.html" class="class-specified-type">PathRemap</a>
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Variable/PathRemap" class="dashAnchor">PathRemap</a></span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-member">
+                <a href="OS.html" class="class-specified-type">OS</a>
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Variable/OS" class="dashAnchor">OS</a></span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-member">
+                <a href="Reference.html" class="class-specified-type">Reference</a>
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Variable/Marshalls" class="dashAnchor">Marshalls</a></span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-member">
+                <a href="TranslationServer.html" class="class-specified-type">TranslationServer</a>
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Variable/TranslationServer" class="dashAnchor">TranslationServer</a></span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-member">
+                <a href="TranslationServer.html" class="class-specified-type">TranslationServer</a>
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Variable/TS" class="dashAnchor">TS</a></span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-member">
+                <a href="Input.html" class="class-specified-type">Input</a>
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Variable/Input" class="dashAnchor">Input</a></span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-member">
+                <a href="InputMap.html" class="class-specified-type">InputMap</a>
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Variable/InputMap" class="dashAnchor">InputMap</a></span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-member">
+                <a href="VisualServer.html" class="class-specified-type">VisualServer</a>
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Variable/VisualServer" class="dashAnchor">VisualServer</a></span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-member">
+                <a href="VisualServer.html" class="class-specified-type">VisualServer</a>
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Variable/VS" class="dashAnchor">VS</a></span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-member">
+                <a href="AudioServer.html" class="class-specified-type">AudioServer</a>
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Variable/AudioServer" class="dashAnchor">AudioServer</a></span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-member">
+                <a href="AudioServer.html" class="class-specified-type">AudioServer</a>
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Variable/AS" class="dashAnchor">AS</a></span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-member">
+                <a href="PhysicsServer.html" class="class-specified-type">PhysicsServer</a>
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Variable/PhysicsServer" class="dashAnchor">PhysicsServer</a></span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-member">
+                <a href="PhysicsServer.html" class="class-specified-type">PhysicsServer</a>
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Variable/PS" class="dashAnchor">PS</a></span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-member">
+                <a href="Physics2DServer.html" class="class-specified-type">Physics2DServer</a>
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Variable/Physics2DServer" class="dashAnchor">Physics2DServer</a></span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-member">
+                <a href="Physics2DServer.html" class="class-specified-type">Physics2DServer</a>
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Variable/PS2D" class="dashAnchor">PS2D</a></span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-member">
+                <a href="SpatialSound2DServer.html" class="class-specified-type">SpatialSound2DServer</a>
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Variable/SpatialSoundServer" class="dashAnchor">SpatialSoundServer</a></span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-member">
+                <a href="SpatialSound2DServer.html" class="class-specified-type">SpatialSound2DServer</a>
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Variable/SS" class="dashAnchor">SS</a></span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-member">
+                <a href="SpatialSound2DServer.html" class="class-specified-type">SpatialSound2DServer</a>
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Variable/SpatialSound2DServer" class="dashAnchor">SpatialSound2DServer</a></span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-member">
+                <a href="SpatialSound2DServer.html" class="class-specified-type">SpatialSound2DServer</a>
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Variable/SS2D" class="dashAnchor">SS2D</a></span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+        </div> <!-- ned div.class-members -->
+
+
+
+
+    </div> <!-- end div.class-section -->
+</div>
+<!-------------- END HERE ---------------->
+
+</body>
+
+</html>

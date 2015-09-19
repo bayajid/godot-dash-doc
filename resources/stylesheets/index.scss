@@ -1,0 +1,116 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+$linkColor: #3b4b5b;
+$mainHeaderColor: #2d3d4d;
+$textColor: #333;
+$subHeaderColor: #5c6977;
+$subSubHeaderColor: #b9bfc6;
+$baseFont: Lato, 'Lucida Grande', Helvetica, Arial, sans-serif;
+$descriptionFont: Helvetica;
+body {
+    @include fill-parent();
+    margin          : 0;
+    padding         : 0;
+    background-color: #fff;
+    font-family     : $baseFont;
+    color           : $textColor;
+}
+a {
+    color: lighten($linkColor, 20);
+}
+#doc-container {
+    @include outer-container();
+}
+.class-argument-col {
+    @include span-columns(3);
+}
+.class-argument-descrip-col {
+    @include span-columns(8);
+}
+.class-argument-name-col {
+    @include span-columns(2);
+}
+.class-argument-row {
+    @include fill-parent();
+    @include row(table);
+}
+.class-argument-table {
+    
+}
+.class-arguments {
+    @include shift(1);
+}
+.class-brief-description {
+    
+}
+.class-constant {
+    
+}
+.class-constants {
+    
+}
+.class-description {
+    font-family: $descriptionFont;
+    margin-top : 5px;
+}
+.class-descriptions {
+    
+}
+.class-member {
+    
+}
+.class-members {
+    
+}
+.class-method {
+    
+}
+.class-method-declaration {
+    
+}
+.class-method-name {
+    color: $linkColor;
+}
+.class-methods {
+    
+}
+.class-name {
+    @include fill-parent();
+    padding-left    : 10px;
+    background-color: $mainHeaderColor;
+    color           : #fff;
+    border-radius   : 5px;
+}
+.class-section {
+    
+}
+.class-signal {
+    
+}
+.class-signals {
+    
+}
+.class-specified-argument {
+    
+}
+.class-specified-arguments {
+    
+}
+.class-specified-name {
+    
+}
+.class-specified-type {
+    
+}
+.class-specified-value {
+    
+}
+.class-subtitle {
+    color: $subSubHeaderColor;
+}
+.class-title {
+    border-bottom   : 1px black solid;
+    font-family     : $baseFont;
+    background-color: $subHeaderColor;
+    color           : #fff;
+}

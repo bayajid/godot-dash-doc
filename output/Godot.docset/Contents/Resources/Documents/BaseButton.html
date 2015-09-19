@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Class BaseButton</title>
+    <link rel="stylesheet" href="../index.css">
+</head>
+
+<body>
+
+<!-------------- BEGIN HERE ---------------->
+<div id="doc-container">
+
+    <h1 class="class-name">BaseButton</h1>
+    <div class="class-section">
+
+
+        <div class="class-descriptions">
+            <h4 class="class-subtitle">Brief Description</h4>
+            <div class="class-brief-description">
+                 Provides a base class for different kinds of buttons. 
+            </div>
+            <h4 class="class-subtitle">Full Description</h4>
+            <div class="class-description">
+                 BaseButton is the abstract base class for buttons, so it shouldn&#x27;t be used directly (It doesnt display anything). Other types of buttons inherit from it. 
+            </div>
+        </div> <!-- end div.class-descriptions -->
+
+        <div class="class-methods">
+            <h2 class="class-title">Methods</h2>
+
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_pressed" href="#" class="class-method-name dashAnchor">set_pressed</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_pressed</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="bool.html" class="class-specified-type">bool</a>
+                                <span class="class-specified-name">pressed</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set the button to pressed state (only if toggle_mode is active). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/is_pressed" href="#" class="class-method-name dashAnchor">is_pressed</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">is_pressed</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return when the button is pressed (only if toggle_mode is active). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/is_hovered" href="#" class="class-method-name dashAnchor">is_hovered</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">is_hovered</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_toggle_mode" href="#" class="class-method-name dashAnchor">set_toggle_mode</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_toggle_mode</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="bool.html" class="class-specified-type">bool</a>
+                                <span class="class-specified-name">enabled</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set the button toggle_mode property. Toggle mode makes the button flip state between pressed and unpressed each time its area is clicked. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/is_toggle_mode" href="#" class="class-method-name dashAnchor">is_toggle_mode</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">is_toggle_mode</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the toggle_mode property (see [method set_toggle_mode]). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_disabled" href="#" class="class-method-name dashAnchor">set_disabled</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_disabled</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="bool.html" class="class-specified-type">bool</a>
+                                <span class="class-specified-name">disabled</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set the button into disabled state. When a button is disabled, it can&#x27;t be clicked or toggled. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/is_disabled" href="#" class="class-method-name dashAnchor">is_disabled</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">is_disabled</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return wether the button is in disabled state (see [method set_disabled]). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_click_on_press" href="#" class="class-method-name dashAnchor">set_click_on_press</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_click_on_press</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="bool.html" class="class-specified-type">bool</a>
+                                <span class="class-specified-name">enable</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set the button click_on_press mode. This mode generates click events when a mousebutton or key is just pressed (by default events are generated when the button/keys are released and both press and release occur in the visual area of the Button). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_click_on_press" href="#" class="class-method-name dashAnchor">get_click_on_press</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">get_click_on_press</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the state of the click_on_press property (see [method set_click_on_press]). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_draw_mode" href="#" class="class-method-name dashAnchor">get_draw_mode</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">get_draw_mode</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the visual state used to draw the button. This is useful mainly when implementing your own draw code by either overiding _draw() or connecting to &quot;draw&quot; signal. The visual state of the button is defined by the DRAW_* enum. 
+                </div>
+
+
+            </div> <!-- end div.class-method -->
+        </div> <!-- end div.class-methods -->
+
+        <div class="class-constants">
+            <h2 class="class-title">Constants</h2>
+
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/DRAW_NORMAL" class="dashAnchor">DRAW_NORMAL</a></span>
+                =
+                <span class="class-specified-value">0</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/DRAW_PRESSED" class="dashAnchor">DRAW_PRESSED</a></span>
+                =
+                <span class="class-specified-value">1</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/DRAW_HOVER" class="dashAnchor">DRAW_HOVER</a></span>
+                =
+                <span class="class-specified-value">2</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/DRAW_DISABLED" class="dashAnchor">DRAW_DISABLED</a></span>
+                =
+                <span class="class-specified-value">3</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+        </div> <!-- End div.class-constants -->
+
+
+
+
+        <div class="class-signals">
+            <h2 class="class-title">Signals</h2>
+            <div class="class-signal">
+                <div class="class-specified-name">
+                    <a name="//apple_ref/cpp/Event/released" class="dashAnchor">released</a>
+                </div>
+
+
+            </div>
+            <div class="class-signal">
+                <div class="class-specified-name">
+                    <a name="//apple_ref/cpp/Event/toggled" class="dashAnchor">toggled</a>
+                </div>
+
+                <div class="class-arguments">
+                    <div class="class-argument-table">
+                    </div>
+                </div>
+
+            </div>
+            <div class="class-signal">
+                <div class="class-specified-name">
+                    <a name="//apple_ref/cpp/Event/pressed" class="dashAnchor">pressed</a>
+                </div>
+
+
+            </div>
+
+        </div> <!-- end div.class-signals -->
+
+
+    </div> <!-- end div.class-section -->
+</div>
+<!-------------- END HERE ---------------->
+
+</body>
+
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Class StyleBox</title>
+    <link rel="stylesheet" href="../index.css">
+</head>
+
+<body>
+
+<!-------------- BEGIN HERE ---------------->
+<div id="doc-container">
+
+    <h1 class="class-name">StyleBox</h1>
+    <div class="class-section">
+
+
+        <div class="class-descriptions">
+            <h4 class="class-subtitle">Brief Description</h4>
+            <div class="class-brief-description">
+                 Base class for drawing stylized boxes for the UI. 
+            </div>
+            <h4 class="class-subtitle">Full Description</h4>
+            <div class="class-description">
+                 StyleBox is [Resource] that provides an abstract base class for drawing stylized boxes for the UI. StyleBoxes are used for drawing the styles of buttons, line edit backgrounds, tree backgrounds, etc. and also for testing a transparency mask for pointer signals. If mask test fails on a StyleBox assigned as mask to a control, clicks and motion signals will go through it to the one below. 
+            </div>
+        </div> <!-- end div.class-descriptions -->
+
+        <div class="class-methods">
+            <h2 class="class-title">Methods</h2>
+
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/test_mask" href="#" class="class-method-name dashAnchor">test_mask</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">test_mask</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                                <span class="class-specified-name">point</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Rect2.html" class="class-specified-type">Rect2</a>
+                                <span class="class-specified-name">rect</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Test a position in a rectangle, return wether it pases the mask test. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_default_margin" href="#" class="class-method-name dashAnchor">set_default_margin</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_default_margin</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">margin</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="float.html" class="class-specified-type">float</a>
+                                <span class="class-specified-name">offset</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set the default offset &quot;offset&quot; of the margin &quot;margin&quot; (see MARGIN_* enum) for a StyleBox, Controls that draw styleboxes with context inside need to know the margin, so the border of the stylebox is not occluded. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_default_margin" href="#" class="class-method-name dashAnchor">get_default_margin</a></h3>
+                <span class="class-method-declaration">
+                    <a href="float.html" class="class-specified-type">float</a>
+                    <span class="class-specified-name">get_default_margin</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">margin</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the default offset of the margin &quot;margin&quot; (see MARGIN_* enum) of a StyleBox, Controls that draw styleboxes with context inside need to know the margin, so the border of the stylebox is not occluded. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_margin" href="#" class="class-method-name dashAnchor">get_margin</a></h3>
+                <span class="class-method-declaration">
+                    <a href="float.html" class="class-specified-type">float</a>
+                    <span class="class-specified-name">get_margin</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">margin</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the offset of margin &quot;margin&quot; (see MARGIN_* enum). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_minimum_size" href="#" class="class-method-name dashAnchor">get_minimum_size</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                    <span class="class-specified-name">get_minimum_size</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the minimum size that this stylebox can be shrunk to. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_center_size" href="#" class="class-method-name dashAnchor">get_center_size</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                    <span class="class-specified-name">get_center_size</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_offset" href="#" class="class-method-name dashAnchor">get_offset</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                    <span class="class-specified-name">get_offset</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the &quot;offset&quot; of a stylebox, this is a helper function, like writing Point2( style.get_margin(MARGIN_LEFT), style.get_margin(MARGIN_TOP) ) 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/draw" href="#" class="class-method-name dashAnchor">draw</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">draw</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">arg0</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Rect2.html" class="class-specified-type">Rect2</a>
+                                <span class="class-specified-name">arg1</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+            </div> <!-- end div.class-method -->
+        </div> <!-- end div.class-methods -->
+
+
+
+
+
+
+
+    </div> <!-- end div.class-section -->
+</div>
+<!-------------- END HERE ---------------->
+
+</body>
+
+</html>

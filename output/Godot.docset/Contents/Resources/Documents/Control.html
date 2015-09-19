@@ -1,0 +1,2040 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Class Control</title>
+    <link rel="stylesheet" href="../index.css">
+</head>
+
+<body>
+
+<!-------------- BEGIN HERE ---------------->
+<div id="doc-container">
+
+    <h1 class="class-name">Control</h1>
+    <div class="class-section">
+
+
+        <div class="class-descriptions">
+            <h4 class="class-subtitle">Brief Description</h4>
+            <div class="class-brief-description">
+                 Control is the base node for all the GUI components. 
+            </div>
+            <h4 class="class-subtitle">Full Description</h4>
+            <div class="class-description">
+                 Control is the base class Node for all the GUI components. Every GUI component inherits from it, directly or indirectly. In this way, sections of the scene tree made of contiguous control nodes, become user interfaces. Controls are relative to the parent position and size by using anchors and margins. This ensures that they can adapt easily in most situation to changing dialog and screen sizes. When more flexibility is desired, [Container] derived nodes can be used. Anchors work by defining which margin do they follow, and a value relative to it. Allowed anchoring modes are ANCHOR_BEGIN, where the margin is relative to the top or left margins of the parent (in pixels), ANCHOR_END for the right and bottom margins of the parent and ANCHOR_RATIO, which is a ratio from 0 to 1 in the parent range. Input device events ([InputEvent]) are first sent to the root controls via the [method Node._input], which distribute it through the tree, then delivers them to the adequate one (under cursor or keyboard focus based) by calling [Node._input_event]. There is no need to enable input processing on controls to receive such events. To ensure that no one else will receive the event (not even [method Node._unhandled_input]), the control can accept it by calling [method accept_event]. Only one control can hold the keyboard focus (receiving keyboard events), for that the control must define the focus mode with [method set_focus_mode]. Focus is lost when another control gains it, or the current focus owner is hidden. It is sometimes desired for a control to ignore mouse/pointer events. This is often the case when placing other controls on top of a button, in such cases. Calling [method set_ignore_mouse] enables this function. Finally, controls are skinned according to a [Theme]. Setting a [Theme] on a control will propagate all the skinning down the tree. Optionally, skinning can be overrided per each control by calling the add_*_override functions, or from the editor. 
+            </div>
+        </div> <!-- end div.class-descriptions -->
+
+        <div class="class-methods">
+            <h2 class="class-title">Methods</h2>
+
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/_input_event" href="#" class="class-method-name dashAnchor">_input_event</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">_input_event</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="InputEvent.html" class="class-specified-type">InputEvent</a>
+                                <span class="class-specified-name">event</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Called when an input event reaches the control. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/can_drop_data" href="#" class="class-method-name dashAnchor">can_drop_data</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">can_drop_data</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                                <span class="class-specified-name">pos</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="var.html" class="class-specified-type">var</a>
+                                <span class="class-specified-name">data</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/drop_data" href="#" class="class-method-name dashAnchor">drop_data</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">drop_data</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                                <span class="class-specified-name">pos</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="var.html" class="class-specified-type">var</a>
+                                <span class="class-specified-name">data</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_drag_data" href="#" class="class-method-name dashAnchor">get_drag_data</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Object.html" class="class-specified-type">Object</a>
+                    <span class="class-specified-name">get_drag_data</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                                <span class="class-specified-name">pos</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_minimum_size" href="#" class="class-method-name dashAnchor">get_minimum_size</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                    <span class="class-specified-name">get_minimum_size</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the minimum size this Control can shrink to. A control will never be displayed or resized smaller than its minimum size. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/accept_event" href="#" class="class-method-name dashAnchor">accept_event</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">accept_event</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Handles the event, no other control will receive it and it will not be sent to nodes waiting on [method Node._unhandled_input] or [method Node._unhandled_key_input]. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_minimum_size" href="#" class="class-method-name dashAnchor">get_minimum_size</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                    <span class="class-specified-name">get_minimum_size</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the minimum size this Control can shrink to. A control will never be displayed or resized smaller than its minimum size. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_combined_minimum_size" href="#" class="class-method-name dashAnchor">get_combined_minimum_size</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                    <span class="class-specified-name">get_combined_minimum_size</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/is_window" href="#" class="class-method-name dashAnchor">is_window</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">is_window</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return wether this control is a [i]window[/i]. Controls are considered windows when their parent [Node] is not a Control. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_window" href="#" class="class-method-name dashAnchor">get_window</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Object.html" class="class-specified-type">Object</a>
+                    <span class="class-specified-name">get_window</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the [i]window[/i] for this control, ascending the scene tree (see [method is_window]). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_anchor" href="#" class="class-method-name dashAnchor">set_anchor</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_anchor</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">margin</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">anchor_mode</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Change the anchor (ANCHOR_BEGIN, ANCHOR_END, ANCHOR_RATIO) type for a margin (MARGIN_LEFT, MARGIN_TOP, MARGIN_RIGHT, MARGIN_BOTTOM). Changing the anchor mode converts the current margin offset from the previos anchor mode to the new one, so margin offsets ([method set_margin]) must be done after setting anchors, or at the same time ([method set_anchor_and_margin]). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_anchor" href="#" class="class-method-name dashAnchor">get_anchor</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">get_anchor</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">margin</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the anchor type (ANCHOR_BEGIN, ANCHOR_END, ANCHOR_RATIO) for a given margin (MARGIN_LEFT, MARGIN_TOP, MARGIN_RIGHT, MARGIN_BOTTOM). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_margin" href="#" class="class-method-name dashAnchor">set_margin</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_margin</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">margin</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="float.html" class="class-specified-type">float</a>
+                                <span class="class-specified-name">offset</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set a margin offset. Margin can be one of (MARGIN_LEFT, MARGIN_TOP, MARGIN_RIGHT, MARGIN_BOTTOM). Offset value being set depends on the anchor mode. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_anchor_and_margin" href="#" class="class-method-name dashAnchor">set_anchor_and_margin</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_anchor_and_margin</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">margin</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">anchor_mode</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="float.html" class="class-specified-type">float</a>
+                                <span class="class-specified-name">offset</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Change the anchor (ANCHOR_BEGIN, ANCHOR_END, ANCHOR_RATIO) type for a margin (MARGIN_LEFT, MARGIN_TOP, MARGIN_RIGHT, MARGIN_BOTTOM), and also set its offset. This is a helper (see [method set_anchor] and [method set_margin]). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_begin" href="#" class="class-method-name dashAnchor">set_begin</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_begin</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                                <span class="class-specified-name">pos</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Sets MARGIN_LEFT and MARGIN_TOP at the same time. This is a helper (see [method set_margin]). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_end" href="#" class="class-method-name dashAnchor">set_end</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_end</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                                <span class="class-specified-name">pos</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Sets MARGIN_RIGHT and MARGIN_BOTTOM at the same time. This is a helper (see [method set_margin]). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_pos" href="#" class="class-method-name dashAnchor">set_pos</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_pos</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                                <span class="class-specified-name">pos</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Move the Control to a new position, relative to the top-left corner of the parent Control, changing all margins if needed and without changing current anchor mode. This is a helper (see [method set_margin]). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_size" href="#" class="class-method-name dashAnchor">set_size</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_size</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                                <span class="class-specified-name">size</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Changes MARGIN_RIGHT and MARGIN_BOTTOM to fit a given size. This is a helper (see [method set_margin]). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_custom_minimum_size" href="#" class="class-method-name dashAnchor">set_custom_minimum_size</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_custom_minimum_size</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                                <span class="class-specified-name">size</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_global_pos" href="#" class="class-method-name dashAnchor">set_global_pos</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_global_pos</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                                <span class="class-specified-name">pos</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Move the Control to a new position, relative to the top-left corner of the [i]window[/i] Control, and without changing current anchor mode. (see [method set_margin]). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_margin" href="#" class="class-method-name dashAnchor">get_margin</a></h3>
+                <span class="class-method-declaration">
+                    <a href="float.html" class="class-specified-type">float</a>
+                    <span class="class-specified-name">get_margin</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">margin</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return a margin offset. Margin can be one of (MARGIN_LEFT, MARGIN_TOP, MARGIN_RIGHT, MARGIN_BOTTOM). Offset value being returned depends on the anchor mode. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_begin" href="#" class="class-method-name dashAnchor">get_begin</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                    <span class="class-specified-name">get_begin</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_end" href="#" class="class-method-name dashAnchor">get_end</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                    <span class="class-specified-name">get_end</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Returns MARGIN_LEFT and MARGIN_TOP at the same time. This is a helper (see [method set_margin]). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_pos" href="#" class="class-method-name dashAnchor">get_pos</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                    <span class="class-specified-name">get_pos</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Returns the Control position, relative to the top-left corner of the parent Control and independly of the anchor mode. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_size" href="#" class="class-method-name dashAnchor">get_size</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                    <span class="class-specified-name">get_size</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Returns the size of the Control, computed from all margins, however the size returned will [b]never be smaller than the minimum size reported by [method get_minimum_size][/b]. This means that even if end position of the Control rectangle is smaller than the begin position, the Control will still display and interact correctly. (see description, [method get_minimum_size], [method set_margin], [method set_anchor]). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_custom_minimum_size" href="#" class="class-method-name dashAnchor">get_custom_minimum_size</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                    <span class="class-specified-name">get_custom_minimum_size</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_parent_area_size" href="#" class="class-method-name dashAnchor">get_parent_area_size</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                    <span class="class-specified-name">get_parent_area_size</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_global_pos" href="#" class="class-method-name dashAnchor">get_global_pos</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                    <span class="class-specified-name">get_global_pos</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Returns the Control position, relative to the top-left corner of the parent Control and independent of the anchor mode. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_rect" href="#" class="class-method-name dashAnchor">get_rect</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Rect2.html" class="class-specified-type">Rect2</a>
+                    <span class="class-specified-name">get_rect</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return position and size of the Control, relative to the top-left corner of the parent Control. This is a helper (see [method get_pos],[method get_size]). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_global_rect" href="#" class="class-method-name dashAnchor">get_global_rect</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Rect2.html" class="class-specified-type">Rect2</a>
+                    <span class="class-specified-name">get_global_rect</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return position and size of the Control, relative to the top-left corner of the [i]window[/i] Control. This is a helper (see [method get_global_pos],[method get_size]). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_area_as_parent_rect" href="#" class="class-method-name dashAnchor">set_area_as_parent_rect</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_area_as_parent_rect</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">margin</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Change all margins and anchors, so this Control always takes up the same area as the parent Control. This is a helper (see [method set_anchor],[method set_margin]). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/show_modal" href="#" class="class-method-name dashAnchor">show_modal</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">show_modal</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="bool.html" class="class-specified-type">bool</a>
+                                <span class="class-specified-name">exclusive</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Display a Control as modal. Control must be a subwindow (see [method set_as_subwindow]). Modal controls capture the input signals until closed or the area outside them is accessed. When a modal control loses focus, or the ESC key is pressed, they automatically hide. Modal controls are used extensively for popup dialogs and menus. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_focus_mode" href="#" class="class-method-name dashAnchor">set_focus_mode</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_focus_mode</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">mode</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set the focus access mode for the control (FOCUS_NONE, FOCUS_CLICK, FOCUS_ALL). Only one Control can be focused at the same time, and it will receive keyboard signals. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/has_focus" href="#" class="class-method-name dashAnchor">has_focus</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">has_focus</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return wether the Control is the current focused control (see [method set_focus_mode]). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/grab_focus" href="#" class="class-method-name dashAnchor">grab_focus</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">grab_focus</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Steal the focus from another control and become the focused control (see [method set_focus_mode]). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/release_focus" href="#" class="class-method-name dashAnchor">release_focus</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">release_focus</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Give up the focus, no other control will be able to receive keyboard input. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_focus_owner" href="#" class="class-method-name dashAnchor">get_focus_owner</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Control.html" class="class-specified-type">Control</a>
+                    <span class="class-specified-name">get_focus_owner</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return which control is owning the keyboard focus, or null if no one. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_h_size_flags" href="#" class="class-method-name dashAnchor">set_h_size_flags</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_h_size_flags</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">flags</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Hint for containers, set horizontal positioning flags. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_h_size_flags" href="#" class="class-method-name dashAnchor">get_h_size_flags</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">get_h_size_flags</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Hint for containers, return horizontal positioning flags. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_stretch_ratio" href="#" class="class-method-name dashAnchor">set_stretch_ratio</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_stretch_ratio</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="float.html" class="class-specified-type">float</a>
+                                <span class="class-specified-name">ratio</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Hint for containers, set the stretch ratio. This value is relative to other stretch ratio, so if this control has 2 and another has 1, this one will be twice as big. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_stretch_ratio" href="#" class="class-method-name dashAnchor">get_stretch_ratio</a></h3>
+                <span class="class-method-declaration">
+                    <a href="float.html" class="class-specified-type">float</a>
+                    <span class="class-specified-name">get_stretch_ratio</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Hint for containers, return the stretch ratio. This value is relative to other stretch ratio, so if this control has 2 and another has 1, this one will be twice as big. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_v_size_flags" href="#" class="class-method-name dashAnchor">set_v_size_flags</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_v_size_flags</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">flags</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Hint for containers, set vertical positioning flags. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_v_size_flags" href="#" class="class-method-name dashAnchor">get_v_size_flags</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">get_v_size_flags</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Hint for containers, return vertical positioning flags. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_theme" href="#" class="class-method-name dashAnchor">set_theme</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_theme</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Theme.html" class="class-specified-type">Theme</a>
+                                <span class="class-specified-name">theme</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Override whole the [Theme] for this Control and all its children controls. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_theme" href="#" class="class-method-name dashAnchor">get_theme</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Theme.html" class="class-specified-type">Theme</a>
+                    <span class="class-specified-name">get_theme</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return a [Theme] override, if one exists (see [method set_theme]). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/add_icon_override" href="#" class="class-method-name dashAnchor">add_icon_override</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">add_icon_override</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">name</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Texture.html" class="class-specified-type">Texture</a>
+                                <span class="class-specified-name">texture</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Override a single icon ([Texture]) in the theme of this Control. If texture is empty, override is cleared. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/add_style_override" href="#" class="class-method-name dashAnchor">add_style_override</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">add_style_override</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">name</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="StyleBox.html" class="class-specified-type">StyleBox</a>
+                                <span class="class-specified-name">stylebox</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Override a single stylebox ([Stylebox]) in the theme of this Control. If stylebox is empty, override is cleared. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/add_font_override" href="#" class="class-method-name dashAnchor">add_font_override</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">add_font_override</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">name</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Font.html" class="class-specified-type">Font</a>
+                                <span class="class-specified-name">font</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Override a single font (font) in the theme of this Control. If font is empty, override is cleared. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/add_color_override" href="#" class="class-method-name dashAnchor">add_color_override</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">add_color_override</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">name</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Color.html" class="class-specified-type">Color</a>
+                                <span class="class-specified-name">color</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/add_constant_override" href="#" class="class-method-name dashAnchor">add_constant_override</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">add_constant_override</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">name</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">constant</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Override a single constant (integer) in the theme of this Control. If constant equals Theme.INVALID_CONSTANT, override is cleared. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_icon" href="#" class="class-method-name dashAnchor">get_icon</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Texture.html" class="class-specified-type">Texture</a>
+                    <span class="class-specified-name">get_icon</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">name</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">type</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_stylebox" href="#" class="class-method-name dashAnchor">get_stylebox</a></h3>
+                <span class="class-method-declaration">
+                    <a href="StyleBox.html" class="class-specified-type">StyleBox</a>
+                    <span class="class-specified-name">get_stylebox</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">name</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">type</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_font" href="#" class="class-method-name dashAnchor">get_font</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Font.html" class="class-specified-type">Font</a>
+                    <span class="class-specified-name">get_font</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">name</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">type</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_color" href="#" class="class-method-name dashAnchor">get_color</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Color.html" class="class-specified-type">Color</a>
+                    <span class="class-specified-name">get_color</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">name</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">type</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_constant" href="#" class="class-method-name dashAnchor">get_constant</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">get_constant</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">name</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">type</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_parent_control" href="#" class="class-method-name dashAnchor">get_parent_control</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Control.html" class="class-specified-type">Control</a>
+                    <span class="class-specified-name">get_parent_control</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_tooltip" href="#" class="class-method-name dashAnchor">set_tooltip</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_tooltip</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">tooltip</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set a tooltip, which will appear when the cursor is resting over this control. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_tooltip" href="#" class="class-method-name dashAnchor">get_tooltip</a></h3>
+                <span class="class-method-declaration">
+                    <a href="String.html" class="class-specified-type">String</a>
+                    <span class="class-specified-name">get_tooltip</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                                <span class="class-specified-name">atpos</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the tooltip, which will appear when the cursor is resting over this control. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_default_cursor_shape" href="#" class="class-method-name dashAnchor">set_default_cursor_shape</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_default_cursor_shape</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">shape</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set the default cursor shape for this control. See enum CURSOR_* for the list of shapes. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_default_cursor_shape" href="#" class="class-method-name dashAnchor">get_default_cursor_shape</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">get_default_cursor_shape</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the default cursor shape for this control. See enum CURSOR_* for the list of shapes. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_cursor_shape" href="#" class="class-method-name dashAnchor">get_cursor_shape</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">get_cursor_shape</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Vector2.html" class="class-specified-type">Vector2</a>
+                                <span class="class-specified-name">pos</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the cursor shape at a certain position in the control. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_focus_neighbour" href="#" class="class-method-name dashAnchor">set_focus_neighbour</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_focus_neighbour</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">margin</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="NodePath.html" class="class-specified-type">NodePath</a>
+                                <span class="class-specified-name">neighbour</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Force a neighbour for moving the input focus to. When pressing TAB or directional/joypad directions focus is moved to the next control in that direction. However, the neighbour to move to can be forced with this function. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_focus_neighbour" href="#" class="class-method-name dashAnchor">get_focus_neighbour</a></h3>
+                <span class="class-method-declaration">
+                    <a href="NodePath.html" class="class-specified-type">NodePath</a>
+                    <span class="class-specified-name">get_focus_neighbour</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">margin</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the forced neighbour for moving the input focus to. When pressing TAB or directional/joypad directions focus is moved to the next control in that direction. However, the neighbour to move to can be forced with this function. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_ignore_mouse" href="#" class="class-method-name dashAnchor">set_ignore_mouse</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_ignore_mouse</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="bool.html" class="class-specified-type">bool</a>
+                                <span class="class-specified-name">ignore</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Ignore mouse events on this control (even touchpad events send mouse events). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/is_ignoring_mouse" href="#" class="class-method-name dashAnchor">is_ignoring_mouse</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">is_ignoring_mouse</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return if the control is ignoring mouse events (even touchpad events send mouse events). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/force_drag" href="#" class="class-method-name dashAnchor">force_drag</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">force_drag</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="var.html" class="class-specified-type">var</a>
+                                <span class="class-specified-name">data</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Object.html" class="class-specified-type">Object</a>
+                                <span class="class-specified-name">preview</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_stop_mouse" href="#" class="class-method-name dashAnchor">set_stop_mouse</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_stop_mouse</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="bool.html" class="class-specified-type">bool</a>
+                                <span class="class-specified-name">stop</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/is_stopping_mouse" href="#" class="class-method-name dashAnchor">is_stopping_mouse</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">is_stopping_mouse</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/grab_click_focus" href="#" class="class-method-name dashAnchor">grab_click_focus</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">grab_click_focus</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_drag_preview" href="#" class="class-method-name dashAnchor">set_drag_preview</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_drag_preview</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Control.html" class="class-specified-type">Control</a>
+                                <span class="class-specified-name">control</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+            </div> <!-- end div.class-method -->
+        </div> <!-- end div.class-methods -->
+
+        <div class="class-constants">
+            <h2 class="class-title">Constants</h2>
+
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ANCHOR_BEGIN" class="dashAnchor">ANCHOR_BEGIN</a></span>
+                =
+                <span class="class-specified-value">0</span>
+                <div class="class-description">
+                     X is relative to MARGIN_LEFT, Y is relative to MARGIN_TOP. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ANCHOR_END" class="dashAnchor">ANCHOR_END</a></span>
+                =
+                <span class="class-specified-value">1</span>
+                <div class="class-description">
+                     X is relative to -MARGIN_RIGHT, Y is relative to -MARGIN_BOTTOM. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ANCHOR_RATIO" class="dashAnchor">ANCHOR_RATIO</a></span>
+                =
+                <span class="class-specified-value">2</span>
+                <div class="class-description">
+                     X and Y are a ratio (0 to 1) relative to the parent size 0 is left/top, 1 is right/bottom. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/ANCHOR_CENTER" class="dashAnchor">ANCHOR_CENTER</a></span>
+                =
+                <span class="class-specified-value">3</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/FOCUS_NONE" class="dashAnchor">FOCUS_NONE</a></span>
+                =
+                <span class="class-specified-value">0</span>
+                <div class="class-description">
+                     Control can&#x27;t acquire focus. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/FOCUS_CLICK" class="dashAnchor">FOCUS_CLICK</a></span>
+                =
+                <span class="class-specified-value">1</span>
+                <div class="class-description">
+                     Control can acquire focus only if clicked. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/FOCUS_ALL" class="dashAnchor">FOCUS_ALL</a></span>
+                =
+                <span class="class-specified-value">2</span>
+                <div class="class-description">
+                     Control can acquire focus if clicked, or by pressing TAB/Directionals in the keyboard from another Control. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/NOTIFICATION_RESIZED" class="dashAnchor">NOTIFICATION_RESIZED</a></span>
+                =
+                <span class="class-specified-value">40</span>
+                <div class="class-description">
+                     Control changed size (get_size() reports the new size). 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/NOTIFICATION_MOUSE_ENTER" class="dashAnchor">NOTIFICATION_MOUSE_ENTER</a></span>
+                =
+                <span class="class-specified-value">41</span>
+                <div class="class-description">
+                     Mouse pointer entered the area of the Control. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/NOTIFICATION_MOUSE_EXIT" class="dashAnchor">NOTIFICATION_MOUSE_EXIT</a></span>
+                =
+                <span class="class-specified-value">42</span>
+                <div class="class-description">
+                     Mouse pointer exited the area of the Control. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/NOTIFICATION_FOCUS_ENTER" class="dashAnchor">NOTIFICATION_FOCUS_ENTER</a></span>
+                =
+                <span class="class-specified-value">43</span>
+                <div class="class-description">
+                     Control gained focus. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/NOTIFICATION_FOCUS_EXIT" class="dashAnchor">NOTIFICATION_FOCUS_EXIT</a></span>
+                =
+                <span class="class-specified-value">44</span>
+                <div class="class-description">
+                     Control lost focus. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/NOTIFICATION_THEME_CHANGED" class="dashAnchor">NOTIFICATION_THEME_CHANGED</a></span>
+                =
+                <span class="class-specified-value">45</span>
+                <div class="class-description">
+                     Theme changed. Redrawing is desired. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/NOTIFICATION_MODAL_CLOSE" class="dashAnchor">NOTIFICATION_MODAL_CLOSE</a></span>
+                =
+                <span class="class-specified-value">46</span>
+                <div class="class-description">
+                     Modal control was closed. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/CURSOR_ARROW" class="dashAnchor">CURSOR_ARROW</a></span>
+                =
+                <span class="class-specified-value">0</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/CURSOR_IBEAM" class="dashAnchor">CURSOR_IBEAM</a></span>
+                =
+                <span class="class-specified-value">1</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/CURSOR_POINTING_HAND" class="dashAnchor">CURSOR_POINTING_HAND</a></span>
+                =
+                <span class="class-specified-value">2</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/CURSOR_CROSS" class="dashAnchor">CURSOR_CROSS</a></span>
+                =
+                <span class="class-specified-value">3</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/CURSOR_WAIT" class="dashAnchor">CURSOR_WAIT</a></span>
+                =
+                <span class="class-specified-value">4</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/CURSOR_BUSY" class="dashAnchor">CURSOR_BUSY</a></span>
+                =
+                <span class="class-specified-value">5</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/CURSOR_DRAG" class="dashAnchor">CURSOR_DRAG</a></span>
+                =
+                <span class="class-specified-value">6</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/CURSOR_CAN_DROP" class="dashAnchor">CURSOR_CAN_DROP</a></span>
+                =
+                <span class="class-specified-value">7</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/CURSOR_FORBIDDEN" class="dashAnchor">CURSOR_FORBIDDEN</a></span>
+                =
+                <span class="class-specified-value">8</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/CURSOR_VSIZE" class="dashAnchor">CURSOR_VSIZE</a></span>
+                =
+                <span class="class-specified-value">9</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/CURSOR_HSIZE" class="dashAnchor">CURSOR_HSIZE</a></span>
+                =
+                <span class="class-specified-value">10</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/CURSOR_BDIAGSIZE" class="dashAnchor">CURSOR_BDIAGSIZE</a></span>
+                =
+                <span class="class-specified-value">11</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/CURSOR_FDIAGSIZE" class="dashAnchor">CURSOR_FDIAGSIZE</a></span>
+                =
+                <span class="class-specified-value">12</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/CURSOR_MOVE" class="dashAnchor">CURSOR_MOVE</a></span>
+                =
+                <span class="class-specified-value">13</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/CURSOR_VSPLIT" class="dashAnchor">CURSOR_VSPLIT</a></span>
+                =
+                <span class="class-specified-value">14</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/CURSOR_HSPLIT" class="dashAnchor">CURSOR_HSPLIT</a></span>
+                =
+                <span class="class-specified-value">15</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/CURSOR_HELP" class="dashAnchor">CURSOR_HELP</a></span>
+                =
+                <span class="class-specified-value">16</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/SIZE_EXPAND" class="dashAnchor">SIZE_EXPAND</a></span>
+                =
+                <span class="class-specified-value">1</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/SIZE_FILL" class="dashAnchor">SIZE_FILL</a></span>
+                =
+                <span class="class-specified-value">2</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/SIZE_EXPAND_FILL" class="dashAnchor">SIZE_EXPAND_FILL</a></span>
+                =
+                <span class="class-specified-value">3</span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+        </div> <!-- End div.class-constants -->
+
+
+
+
+        <div class="class-signals">
+            <h2 class="class-title">Signals</h2>
+            <div class="class-signal">
+                <div class="class-specified-name">
+                    <a name="//apple_ref/cpp/Event/focus_enter" class="dashAnchor">focus_enter</a>
+                </div>
+
+
+            </div>
+            <div class="class-signal">
+                <div class="class-specified-name">
+                    <a name="//apple_ref/cpp/Event/mouse_enter" class="dashAnchor">mouse_enter</a>
+                </div>
+
+
+            </div>
+            <div class="class-signal">
+                <div class="class-specified-name">
+                    <a name="//apple_ref/cpp/Event/resized" class="dashAnchor">resized</a>
+                </div>
+
+
+            </div>
+            <div class="class-signal">
+                <div class="class-specified-name">
+                    <a name="//apple_ref/cpp/Event/minimum_size_changed" class="dashAnchor">minimum_size_changed</a>
+                </div>
+
+
+            </div>
+            <div class="class-signal">
+                <div class="class-specified-name">
+                    <a name="//apple_ref/cpp/Event/size_flags_changed" class="dashAnchor">size_flags_changed</a>
+                </div>
+
+
+            </div>
+            <div class="class-signal">
+                <div class="class-specified-name">
+                    <a name="//apple_ref/cpp/Event/focus_exit" class="dashAnchor">focus_exit</a>
+                </div>
+
+
+            </div>
+            <div class="class-signal">
+                <div class="class-specified-name">
+                    <a name="//apple_ref/cpp/Event/input_event" class="dashAnchor">input_event</a>
+                </div>
+
+
+            </div>
+            <div class="class-signal">
+                <div class="class-specified-name">
+                    <a name="//apple_ref/cpp/Event/mouse_exit" class="dashAnchor">mouse_exit</a>
+                </div>
+
+
+            </div>
+
+        </div> <!-- end div.class-signals -->
+
+
+    </div> <!-- end div.class-section -->
+</div>
+<!-------------- END HERE ---------------->
+
+</body>
+
+</html>

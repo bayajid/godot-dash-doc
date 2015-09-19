@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Class String</title>
+    <link rel="stylesheet" href="../index.css">
+</head>
+
+<body>
+
+<!-------------- BEGIN HERE ---------------->
+<div id="doc-container">
+
+    <h1 class="class-name">String</h1>
+    <div class="class-section">
+
+
+        <div class="class-descriptions">
+            <h4 class="class-subtitle">Brief Description</h4>
+            <div class="class-brief-description">
+                 Built-in string class. 
+            </div>
+            <h4 class="class-subtitle">Full Description</h4>
+            <div class="class-description">
+                 This is the built-in string class (and the one used by GDScript). It supports Unicode and provides all necesary means for string handling. Strings are reference counted and use a copy-on-write approach, so passing them around is cheap in resources. 
+            </div>
+        </div> <!-- end div.class-descriptions -->
+
+        <div class="class-methods">
+            <h2 class="class-title">Methods</h2>
+
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/basename" href="#" class="class-method-name dashAnchor">basename</a></h3>
+                <span class="class-method-declaration">
+                    <a href="String.html" class="class-specified-type">String</a>
+                    <span class="class-specified-name">basename</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     If the string is a path to a file, return the path to the file without the extension. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/begins_with" href="#" class="class-method-name dashAnchor">begins_with</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">begins_with</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">text</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return true if the strings begins with the given string. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/capitalize" href="#" class="class-method-name dashAnchor">capitalize</a></h3>
+                <span class="class-method-declaration">
+                    <a href="String.html" class="class-specified-type">String</a>
+                    <span class="class-specified-name">capitalize</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the string in uppercase. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/casecmp_to" href="#" class="class-method-name dashAnchor">casecmp_to</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">casecmp_to</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">to</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Perform a case-sensitive comparison to antoher string, return -1 if less, 0 if equal and +1 if greater. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/empty" href="#" class="class-method-name dashAnchor">empty</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">empty</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return true if the string is empty. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/extension" href="#" class="class-method-name dashAnchor">extension</a></h3>
+                <span class="class-method-declaration">
+                    <a href="String.html" class="class-specified-type">String</a>
+                    <span class="class-specified-name">extension</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     If the string is a path to a file, return the extension. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/find" href="#" class="class-method-name dashAnchor">find</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">find</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">what</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">from</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Find the first occurence of a substring, return the starting position of the substring or -1 if not found. Optionally, the initial search index can be passed. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/find_last" href="#" class="class-method-name dashAnchor">find_last</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">find_last</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">what</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Find the last occurence of a substring, return the starting position of the substring or -1 if not found. Optionally, the initial search index can be passed. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/findn" href="#" class="class-method-name dashAnchor">findn</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">findn</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">what</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">from</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Find the first occurence of a substring but search as case-insensitive, return the starting position of the substring or -1 if not found. Optionally, the initial search index can be passed. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_base_dir" href="#" class="class-method-name dashAnchor">get_base_dir</a></h3>
+                <span class="class-method-declaration">
+                    <a href="String.html" class="class-specified-type">String</a>
+                    <span class="class-specified-name">get_base_dir</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     If the string is a path to a file, return the base directory. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_file" href="#" class="class-method-name dashAnchor">get_file</a></h3>
+                <span class="class-method-declaration">
+                    <a href="String.html" class="class-specified-type">String</a>
+                    <span class="class-specified-name">get_file</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     If the string is a path to a file, return the file and ignore the base directory. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/hash" href="#" class="class-method-name dashAnchor">hash</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">hash</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Hash the string and return a 32 bits integer. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/hex_to_int" href="#" class="class-method-name dashAnchor">hex_to_int</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">hex_to_int</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Convert a string containing an hexadecimal number into an int. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/insert" href="#" class="class-method-name dashAnchor">insert</a></h3>
+                <span class="class-method-declaration">
+                    <a href="String.html" class="class-specified-type">String</a>
+                    <span class="class-specified-name">insert</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">pos</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">what</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Insert a substring at a given position. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/is_abs_path" href="#" class="class-method-name dashAnchor">is_abs_path</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">is_abs_path</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     If the string is a path to a file or directory, return true if the path is absolute. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/is_rel_path" href="#" class="class-method-name dashAnchor">is_rel_path</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">is_rel_path</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     If the string is a path to a file or directory, return true if the path is relative. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/is_valid_float" href="#" class="class-method-name dashAnchor">is_valid_float</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">is_valid_float</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Check whether the string contains a valid float. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/is_valid_html_color" href="#" class="class-method-name dashAnchor">is_valid_html_color</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">is_valid_html_color</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Check whether the string contains a valid color in HTML notation. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/is_valid_identifier" href="#" class="class-method-name dashAnchor">is_valid_identifier</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">is_valid_identifier</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/is_valid_integer" href="#" class="class-method-name dashAnchor">is_valid_integer</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">is_valid_integer</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Check whether the string contains a valid integer. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/is_valid_ip_address" href="#" class="class-method-name dashAnchor">is_valid_ip_address</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">is_valid_ip_address</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Check whether the string contains a valid IP address. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/left" href="#" class="class-method-name dashAnchor">left</a></h3>
+                <span class="class-method-declaration">
+                    <a href="String.html" class="class-specified-type">String</a>
+                    <span class="class-specified-name">left</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">pos</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return an amount of characters from the left of the string. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/length" href="#" class="class-method-name dashAnchor">length</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">length</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the length of the string in characters. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/match" href="#" class="class-method-name dashAnchor">match</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">match</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">expr</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Do a simple expression matching, using ? and * wildcards. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/matchn" href="#" class="class-method-name dashAnchor">matchn</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">matchn</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">expr</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Do a simple, case insensitive, expression matching, using ? and * wildcards. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/md5_buffer" href="#" class="class-method-name dashAnchor">md5_buffer</a></h3>
+                <span class="class-method-declaration">
+                    <a href="RawArray.html" class="class-specified-type">RawArray</a>
+                    <span class="class-specified-name">md5_buffer</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/md5_text" href="#" class="class-method-name dashAnchor">md5_text</a></h3>
+                <span class="class-method-declaration">
+                    <a href="String.html" class="class-specified-type">String</a>
+                    <span class="class-specified-name">md5_text</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/nocasecmp_to" href="#" class="class-method-name dashAnchor">nocasecmp_to</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">nocasecmp_to</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">to</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Perform a case-insensitive comparison to antoher string, return -1 if less, 0 if equal and +1 if greater. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/ord_at" href="#" class="class-method-name dashAnchor">ord_at</a></h3>
+                <span class="class-method-declaration">
+                    <a href="String.html" class="class-specified-type">String</a>
+                    <span class="class-specified-name">ord_at</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">at</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the character code at position &quot;at&quot;. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/pad_decimals" href="#" class="class-method-name dashAnchor">pad_decimals</a></h3>
+                <span class="class-method-declaration">
+                    <a href="String.html" class="class-specified-type">String</a>
+                    <span class="class-specified-name">pad_decimals</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">digits</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/pad_zeros" href="#" class="class-method-name dashAnchor">pad_zeros</a></h3>
+                <span class="class-method-declaration">
+                    <a href="String.html" class="class-specified-type">String</a>
+                    <span class="class-specified-name">pad_zeros</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">digits</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/percent_decode" href="#" class="class-method-name dashAnchor">percent_decode</a></h3>
+                <span class="class-method-declaration">
+                    <a href="String.html" class="class-specified-type">String</a>
+                    <span class="class-specified-name">percent_decode</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/percent_encode" href="#" class="class-method-name dashAnchor">percent_encode</a></h3>
+                <span class="class-method-declaration">
+                    <a href="String.html" class="class-specified-type">String</a>
+                    <span class="class-specified-name">percent_encode</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/plus_file" href="#" class="class-method-name dashAnchor">plus_file</a></h3>
+                <span class="class-method-declaration">
+                    <a href="String.html" class="class-specified-type">String</a>
+                    <span class="class-specified-name">plus_file</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">file</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/replace" href="#" class="class-method-name dashAnchor">replace</a></h3>
+                <span class="class-method-declaration">
+                    <a href="String.html" class="class-specified-type">String</a>
+                    <span class="class-specified-name">replace</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">what</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">forwhat</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Replace occurrences of a substring for different ones inside the string. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/replacen" href="#" class="class-method-name dashAnchor">replacen</a></h3>
+                <span class="class-method-declaration">
+                    <a href="String.html" class="class-specified-type">String</a>
+                    <span class="class-specified-name">replacen</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">what</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">forwhat</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Replace occurrences of a substring for different ones inside the string, but search case-insensitive. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/rfind" href="#" class="class-method-name dashAnchor">rfind</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">rfind</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">what</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">from</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Perform a search for a substring, but start from the end of the string instead of the begining. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/rfindn" href="#" class="class-method-name dashAnchor">rfindn</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">rfindn</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">what</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">from</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Perform a search for a substring, but start from the end of the string instead of the begining. Also search case-insensitive. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/right" href="#" class="class-method-name dashAnchor">right</a></h3>
+                <span class="class-method-declaration">
+                    <a href="String.html" class="class-specified-type">String</a>
+                    <span class="class-specified-name">right</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">pos</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the right side of the string from a given position. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/split" href="#" class="class-method-name dashAnchor">split</a></h3>
+                <span class="class-method-declaration">
+                    <a href="StringArray.html" class="class-specified-type">StringArray</a>
+                    <span class="class-specified-name">split</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">divisor</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="bool.html" class="class-specified-type">bool</a>
+                                <span class="class-specified-name">allow_empty</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Split the string by a divisor string, return an array of the substrings. Example &quot;One,Two,Three&quot; will return [&quot;One&quot;,&quot;Two&quot;,&quot;Three&quot;] if split by &quot;,&quot;. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/split_floats" href="#" class="class-method-name dashAnchor">split_floats</a></h3>
+                <span class="class-method-declaration">
+                    <a href="RealArray.html" class="class-specified-type">RealArray</a>
+                    <span class="class-specified-name">split_floats</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">divisor</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="bool.html" class="class-specified-type">bool</a>
+                                <span class="class-specified-name">allow_empty</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Split the string in floats by using a divisor string, return an array of the substrings. Example &quot;1,2.5,3&quot; will return [1,2.5,3] if split by &quot;,&quot;. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/strip_edges" href="#" class="class-method-name dashAnchor">strip_edges</a></h3>
+                <span class="class-method-declaration">
+                    <a href="String.html" class="class-specified-type">String</a>
+                    <span class="class-specified-name">strip_edges</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return a copy of the string stripped of any non-printable character at the begining and the end. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/substr" href="#" class="class-method-name dashAnchor">substr</a></h3>
+                <span class="class-method-declaration">
+                    <a href="String.html" class="class-specified-type">String</a>
+                    <span class="class-specified-name">substr</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">from</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">len</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return part of the string from &quot;from&quot;, with length &quot;len&quot;. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/to_float" href="#" class="class-method-name dashAnchor">to_float</a></h3>
+                <span class="class-method-declaration">
+                    <a href="float.html" class="class-specified-type">float</a>
+                    <span class="class-specified-name">to_float</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Convert a string, containing a decimal number, into a float. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/to_int" href="#" class="class-method-name dashAnchor">to_int</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">to_int</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Convert a string, containing an integer number, into an int. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/to_lower" href="#" class="class-method-name dashAnchor">to_lower</a></h3>
+                <span class="class-method-declaration">
+                    <a href="String.html" class="class-specified-type">String</a>
+                    <span class="class-specified-name">to_lower</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the string converted to lowercase. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/to_upper" href="#" class="class-method-name dashAnchor">to_upper</a></h3>
+                <span class="class-method-declaration">
+                    <a href="String.html" class="class-specified-type">String</a>
+                    <span class="class-specified-name">to_upper</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the string converted to uppercase. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/xml_escape" href="#" class="class-method-name dashAnchor">xml_escape</a></h3>
+                <span class="class-method-declaration">
+                    <a href="String.html" class="class-specified-type">String</a>
+                    <span class="class-specified-name">xml_escape</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Perform XML escaping on the string. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/xml_unescape" href="#" class="class-method-name dashAnchor">xml_unescape</a></h3>
+                <span class="class-method-declaration">
+                    <a href="String.html" class="class-specified-type">String</a>
+                    <span class="class-specified-name">xml_unescape</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Perform XML un-escaping of the string. 
+                </div>
+
+
+            </div> <!-- end div.class-method -->
+        </div> <!-- end div.class-methods -->
+
+
+
+
+
+
+
+    </div> <!-- end div.class-section -->
+</div>
+<!-------------- END HERE ---------------->
+
+</body>
+
+</html>

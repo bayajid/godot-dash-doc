@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Class AudioServer</title>
+    <link rel="stylesheet" href="../index.css">
+</head>
+
+<body>
+
+<!-------------- BEGIN HERE ---------------->
+<div id="doc-container">
+
+    <h1 class="class-name">AudioServer</h1>
+    <div class="class-section">
+
+
+        <div class="class-descriptions">
+            <h4 class="class-subtitle">Brief Description</h4>
+            <div class="class-brief-description">
+                 Server interface for low level audio access. 
+            </div>
+            <h4 class="class-subtitle">Full Description</h4>
+            <div class="class-description">
+                 AudioServer is a low level server interface for audio access. It is in charge of creating sample data (playable audio) as well as its playback via a voice interface. 
+            </div>
+        </div> <!-- end div.class-descriptions -->
+
+        <div class="class-methods">
+            <h2 class="class-title">Methods</h2>
+
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/sample_create" href="#" class="class-method-name dashAnchor">sample_create</a></h3>
+                <span class="class-method-declaration">
+                    <a href="RID.html" class="class-specified-type">RID</a>
+                    <span class="class-specified-name">sample_create</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">format</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="bool.html" class="class-specified-type">bool</a>
+                                <span class="class-specified-name">stereo</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">length</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Create an audio sample, return a [RID] referencing it. The sample will be created with a given format (from the SAMPLE_FORMAT_* enum), a total length (in frames, not samples or bytes), in either stereo or mono. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/sample_set_description" href="#" class="class-method-name dashAnchor">sample_set_description</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">sample_set_description</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">sample</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">description</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set the description of an audio sample. Mainly used for organization. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/sample_get_description" href="#" class="class-method-name dashAnchor">sample_get_description</a></h3>
+                <span class="class-method-declaration">
+                    <a href="String.html" class="class-specified-type">String</a>
+                    <span class="class-specified-name">sample_get_description</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">sample</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="String.html" class="class-specified-type">String</a>
+                                <span class="class-specified-name">arg1</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the description of an audio sample. Mainly used for organization. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/sample_get_format" href="#" class="class-method-name dashAnchor">sample_get_format</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">sample_get_format</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">sample</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the format of the audio sample, in the form of the SAMPLE_FORMAT_* enum. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/sample_is_stereo" href="#" class="class-method-name dashAnchor">sample_is_stereo</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">sample_is_stereo</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">sample</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return wether the sample is stereo (2 channels) 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/sample_get_length" href="#" class="class-method-name dashAnchor">sample_get_length</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">sample_get_length</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">sample</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the length in frames of the audio sample (not samples or bytes). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/sample_set_signed_data" href="#" class="class-method-name dashAnchor">sample_set_signed_data</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">sample_set_signed_data</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">sample</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="RealArray.html" class="class-specified-type">RealArray</a>
+                                <span class="class-specified-name">data</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set the sample data for a given sample as an array of floats. The length must be equal to the sample lenght or an error will be produced. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/sample_set_data" href="#" class="class-method-name dashAnchor">sample_set_data</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">sample_set_data</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">sample</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="RawArray.html" class="class-specified-type">RawArray</a>
+                                <span class="class-specified-name">arg1</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set the sample data for a given sample as an array of bytes. The length must be equal to the sample lenght expected in bytes or an error will be produced. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/sample_get_data" href="#" class="class-method-name dashAnchor">sample_get_data</a></h3>
+                <span class="class-method-declaration">
+                    <a href="RawArray.html" class="class-specified-type">RawArray</a>
+                    <span class="class-specified-name">sample_get_data</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">sample</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the sample data as an array of bytes. The length will be the expected length in bytes. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/sample_set_mix_rate" href="#" class="class-method-name dashAnchor">sample_set_mix_rate</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">sample_set_mix_rate</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">sample</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">mix_rate</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Change the default mix rate of a given sample. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/sample_get_mix_rate" href="#" class="class-method-name dashAnchor">sample_get_mix_rate</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">sample_get_mix_rate</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">sample</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the mix rate of the given sample. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/sample_set_loop_format" href="#" class="class-method-name dashAnchor">sample_set_loop_format</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">sample_set_loop_format</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">sample</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">loop_format</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set the loop format for a sample from the SAMPLE_LOOP_* enum. As a warning, Ping Pong loops may not be available on some hardware-mixing platforms. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/sample_get_loop_format" href="#" class="class-method-name dashAnchor">sample_get_loop_format</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">sample_get_loop_format</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">sample</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the loop format for a sample, as a value from the SAMPLE_LOOP_* enum. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/sample_set_loop_begin" href="#" class="class-method-name dashAnchor">sample_set_loop_begin</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">sample_set_loop_begin</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">sample</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">pos</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set the initial loop point of a sample. Only has effect if sample loop is enabled. See [method sample_set_loop_format]. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/sample_get_loop_begin" href="#" class="class-method-name dashAnchor">sample_get_loop_begin</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">sample_get_loop_begin</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">sample</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the initial loop point of a sample. Only has effect if sample loop is enabled. See [method sample_set_loop_format]. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/sample_set_loop_end" href="#" class="class-method-name dashAnchor">sample_set_loop_end</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">sample_set_loop_end</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">sample</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">pos</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set the final loop point of a sample. Only has effect if sample loop is enabled. See [method sample_set_loop_format]. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/sample_get_loop_end" href="#" class="class-method-name dashAnchor">sample_get_loop_end</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">sample_get_loop_end</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">sample</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the final loop point of a sample. Only has effect if sample loop is enabled. See [method sample_set_loop_format]. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/voice_create" href="#" class="class-method-name dashAnchor">voice_create</a></h3>
+                <span class="class-method-declaration">
+                    <a href="RID.html" class="class-specified-type">RID</a>
+                    <span class="class-specified-name">voice_create</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Allocate a voice for playback. Voices are persistent. A voice can play a single sample at the same time. See [method sample_create]. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/voice_play" href="#" class="class-method-name dashAnchor">voice_play</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">voice_play</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">voice</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">sample</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Start playback of a given voice using a given sample. If the voice was already playing it will be restarted. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/voice_set_volume" href="#" class="class-method-name dashAnchor">voice_set_volume</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">voice_set_volume</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">voice</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="float.html" class="class-specified-type">float</a>
+                                <span class="class-specified-name">volume</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Change the volume of a currently playing voice. Volume is expressed as linear gain where 0.0 is mute and 1.0 is default. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/voice_set_pan" href="#" class="class-method-name dashAnchor">voice_set_pan</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">voice_set_pan</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">voice</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="float.html" class="class-specified-type">float</a>
+                                <span class="class-specified-name">pan</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="float.html" class="class-specified-type">float</a>
+                                <span class="class-specified-name">depth</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="float.html" class="class-specified-type">float</a>
+                                <span class="class-specified-name">height</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Change the pan of a currently playing voice and, optionally, the depth and height for a positional/3D sound. Panning values are expressed within the -1 to +1 range. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/voice_set_filter" href="#" class="class-method-name dashAnchor">voice_set_filter</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">voice_set_filter</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">voice</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">type</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="float.html" class="class-specified-type">float</a>
+                                <span class="class-specified-name">cutoff</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="float.html" class="class-specified-type">float</a>
+                                <span class="class-specified-name">resonance</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="float.html" class="class-specified-type">float</a>
+                                <span class="class-specified-name">gain</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set a resonant filter post processing for the voice. Filter type is a value from the FILTER_* enum. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/voice_set_chorus" href="#" class="class-method-name dashAnchor">voice_set_chorus</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">voice_set_chorus</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">voice</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="float.html" class="class-specified-type">float</a>
+                                <span class="class-specified-name">chorus</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set chorus send post processing for the voice (from 0 to 1). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/voice_set_reverb" href="#" class="class-method-name dashAnchor">voice_set_reverb</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">voice_set_reverb</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">voice</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">room</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="float.html" class="class-specified-type">float</a>
+                                <span class="class-specified-name">reverb</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set the reverb send post processing for the voice (from 0 to 1) and the reverb type, from the REVERB_* enum. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/voice_set_mix_rate" href="#" class="class-method-name dashAnchor">voice_set_mix_rate</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">voice_set_mix_rate</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">voice</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">rate</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set a different playback mix rate for the given voice. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/voice_set_positional" href="#" class="class-method-name dashAnchor">voice_set_positional</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">voice_set_positional</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">voice</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="bool.html" class="class-specified-type">bool</a>
+                                <span class="class-specified-name">enabled</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set wether a given voice is positional. This is only interpreted as a hint and used for backends that may support binaural encoding. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/voice_get_volume" href="#" class="class-method-name dashAnchor">voice_get_volume</a></h3>
+                <span class="class-method-declaration">
+                    <a href="float.html" class="class-specified-type">float</a>
+                    <span class="class-specified-name">voice_get_volume</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">voice</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the current volume for a given voice. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/voice_get_pan" href="#" class="class-method-name dashAnchor">voice_get_pan</a></h3>
+                <span class="class-method-declaration">
+                    <a href="float.html" class="class-specified-type">float</a>
+                    <span class="class-specified-name">voice_get_pan</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">voice</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the current pan for a given voice (-1 to +1 range). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/voice_get_pan_height" href="#" class="class-method-name dashAnchor">voice_get_pan_height</a></h3>
+                <span class="class-method-declaration">
+                    <a href="float.html" class="class-specified-type">float</a>
+                    <span class="class-specified-name">voice_get_pan_height</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">voice</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the current pan height for a given voice (-1 to +1 range). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/voice_get_pan_depth" href="#" class="class-method-name dashAnchor">voice_get_pan_depth</a></h3>
+                <span class="class-method-declaration">
+                    <a href="float.html" class="class-specified-type">float</a>
+                    <span class="class-specified-name">voice_get_pan_depth</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">voice</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the current pan depth for a given voice (-1 to +1 range). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/voice_get_filter_type" href="#" class="class-method-name dashAnchor">voice_get_filter_type</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">voice_get_filter_type</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">voice</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the current selected filter type for a given voice, from the FILTER_* enum. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/voice_get_filter_cutoff" href="#" class="class-method-name dashAnchor">voice_get_filter_cutoff</a></h3>
+                <span class="class-method-declaration">
+                    <a href="float.html" class="class-specified-type">float</a>
+                    <span class="class-specified-name">voice_get_filter_cutoff</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">voice</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the current filter cutoff (in hz) for a given voice. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/voice_get_filter_resonance" href="#" class="class-method-name dashAnchor">voice_get_filter_resonance</a></h3>
+                <span class="class-method-declaration">
+                    <a href="float.html" class="class-specified-type">float</a>
+                    <span class="class-specified-name">voice_get_filter_resonance</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">voice</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the current filter resonance for a given voice. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/voice_get_chorus" href="#" class="class-method-name dashAnchor">voice_get_chorus</a></h3>
+                <span class="class-method-declaration">
+                    <a href="float.html" class="class-specified-type">float</a>
+                    <span class="class-specified-name">voice_get_chorus</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">voice</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the current chorus send for a given voice (0 to 1). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/voice_get_reverb_type" href="#" class="class-method-name dashAnchor">voice_get_reverb_type</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">voice_get_reverb_type</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">voice</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the current reverb type for a given voice from the REVERB_* enum. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/voice_get_reverb" href="#" class="class-method-name dashAnchor">voice_get_reverb</a></h3>
+                <span class="class-method-declaration">
+                    <a href="float.html" class="class-specified-type">float</a>
+                    <span class="class-specified-name">voice_get_reverb</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">voice</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the current reverb send for a given voice (0 to 1). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/voice_get_mix_rate" href="#" class="class-method-name dashAnchor">voice_get_mix_rate</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">voice_get_mix_rate</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">voice</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the current mix rate for a given voice. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/voice_is_positional" href="#" class="class-method-name dashAnchor">voice_is_positional</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">voice_is_positional</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">voice</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return wether the current voice is positional. See [method voice_set_positional]. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/voice_stop" href="#" class="class-method-name dashAnchor">voice_stop</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">voice_stop</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">voice</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Stop a given voice. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/free" href="#" class="class-method-name dashAnchor">free</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">free</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="RID.html" class="class-specified-type">RID</a>
+                                <span class="class-specified-name">rid</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Free a [RID] resource. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_stream_global_volume_scale" href="#" class="class-method-name dashAnchor">set_stream_global_volume_scale</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_stream_global_volume_scale</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="float.html" class="class-specified-type">float</a>
+                                <span class="class-specified-name">scale</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Set global scale for stream playback. Default is 1.0. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_stream_global_volume_scale" href="#" class="class-method-name dashAnchor">get_stream_global_volume_scale</a></h3>
+                <span class="class-method-declaration">
+                    <a href="float.html" class="class-specified-type">float</a>
+                    <span class="class-specified-name">get_stream_global_volume_scale</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the global scale for stream playback. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_fx_global_volume_scale" href="#" class="class-method-name dashAnchor">set_fx_global_volume_scale</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_fx_global_volume_scale</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="float.html" class="class-specified-type">float</a>
+                                <span class="class-specified-name">scale</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_fx_global_volume_scale" href="#" class="class-method-name dashAnchor">get_fx_global_volume_scale</a></h3>
+                <span class="class-method-declaration">
+                    <a href="float.html" class="class-specified-type">float</a>
+                    <span class="class-specified-name">get_fx_global_volume_scale</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/set_event_voice_global_volume_scale" href="#" class="class-method-name dashAnchor">set_event_voice_global_volume_scale</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">set_event_voice_global_volume_scale</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="float.html" class="class-specified-type">float</a>
+                                <span class="class-specified-name">scale</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_event_voice_global_volume_scale" href="#" class="class-method-name dashAnchor">get_event_voice_global_volume_scale</a></h3>
+                <span class="class-method-declaration">
+                    <a href="float.html" class="class-specified-type">float</a>
+                    <span class="class-specified-name">get_event_voice_global_volume_scale</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+            </div> <!-- end div.class-method -->
+        </div> <!-- end div.class-methods -->
+
+        <div class="class-constants">
+            <h2 class="class-title">Constants</h2>
+
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/SAMPLE_FORMAT_PCM8" class="dashAnchor">SAMPLE_FORMAT_PCM8</a></span>
+                =
+                <span class="class-specified-value">0</span>
+                <div class="class-description">
+                     Sample format is 8 bits, signed. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/SAMPLE_FORMAT_PCM16" class="dashAnchor">SAMPLE_FORMAT_PCM16</a></span>
+                =
+                <span class="class-specified-value">1</span>
+                <div class="class-description">
+                     Sample format is 16 bits, signed. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/SAMPLE_FORMAT_IMA_ADPCM" class="dashAnchor">SAMPLE_FORMAT_IMA_ADPCM</a></span>
+                =
+                <span class="class-specified-value">2</span>
+                <div class="class-description">
+                     Sample format is IMA-ADPCM compressed. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/SAMPLE_LOOP_NONE" class="dashAnchor">SAMPLE_LOOP_NONE</a></span>
+                =
+                <span class="class-specified-value">0</span>
+                <div class="class-description">
+                     Sample does not loop. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/SAMPLE_LOOP_FORWARD" class="dashAnchor">SAMPLE_LOOP_FORWARD</a></span>
+                =
+                <span class="class-specified-value">1</span>
+                <div class="class-description">
+                     Sample loops in forward mode. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/SAMPLE_LOOP_PING_PONG" class="dashAnchor">SAMPLE_LOOP_PING_PONG</a></span>
+                =
+                <span class="class-specified-value">2</span>
+                <div class="class-description">
+                     Sample loops in a bidirectional way. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/FILTER_NONE" class="dashAnchor">FILTER_NONE</a></span>
+                =
+                <span class="class-specified-value">0</span>
+                <div class="class-description">
+                     Filter is disabled. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/FILTER_LOWPASS" class="dashAnchor">FILTER_LOWPASS</a></span>
+                =
+                <span class="class-specified-value">1</span>
+                <div class="class-description">
+                     Filter is a resonant lowpass. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/FILTER_BANDPASS" class="dashAnchor">FILTER_BANDPASS</a></span>
+                =
+                <span class="class-specified-value">2</span>
+                <div class="class-description">
+                     Filter is a resonant bandpass. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/FILTER_HIPASS" class="dashAnchor">FILTER_HIPASS</a></span>
+                =
+                <span class="class-specified-value">3</span>
+                <div class="class-description">
+                     Filter is a resonant highpass. 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/FILTER_NOTCH" class="dashAnchor">FILTER_NOTCH</a></span>
+                =
+                <span class="class-specified-value">4</span>
+                <div class="class-description">
+                     Filter is a notch (band reject). 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/FILTER_BANDLIMIT" class="dashAnchor">FILTER_BANDLIMIT</a></span>
+                =
+                <span class="class-specified-value">6</span>
+                <div class="class-description">
+                     Filter is a bandlimit (resonance used as highpass). 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/REVERB_SMALL" class="dashAnchor">REVERB_SMALL</a></span>
+                =
+                <span class="class-specified-value">0</span>
+                <div class="class-description">
+                     Small reverb room (closet, bathroom, etc). 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/REVERB_MEDIUM" class="dashAnchor">REVERB_MEDIUM</a></span>
+                =
+                <span class="class-specified-value">1</span>
+                <div class="class-description">
+                     Medium reverb room (living room) 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/REVERB_LARGE" class="dashAnchor">REVERB_LARGE</a></span>
+                =
+                <span class="class-specified-value">2</span>
+                <div class="class-description">
+                     Large reverb room (warehouse). 
+                </div>
+            </div>
+            <div class="class-constant">
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Constant/REVERB_HALL" class="dashAnchor">REVERB_HALL</a></span>
+                =
+                <span class="class-specified-value">3</span>
+                <div class="class-description">
+                     Large reverb room with long decay. 
+                </div>
+            </div>
+        </div> <!-- End div.class-constants -->
+
+
+
+
+
+
+    </div> <!-- end div.class-section -->
+</div>
+<!-------------- END HERE ---------------->
+
+</body>
+
+</html>

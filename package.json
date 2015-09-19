@@ -1,0 +1,17 @@
+{
+  "name": "godot-doc-gen",
+  "version": "0.1.0",
+  "description": "A dash docset and html documentation generator for godot the game engine",
+  "main": "gen.js",
+  "scripts": {
+      "gen-docset" : "node gen.js docset",
+      "gen-html"   : "node gen.js html",
+      "gen-both"   : "node gen.js both"
+  },
+  "dependencies": {
+      "cheerio"    : "latest",
+      "handlebars" : "latest",
+      "sqlite3"    : "latest"
+  },
+  "author": "IndicaInkwell"
+}

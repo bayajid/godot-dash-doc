@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Class AABB</title>
+    <link rel="stylesheet" href="../index.css">
+</head>
+
+<body>
+
+<!-------------- BEGIN HERE ---------------->
+<div id="doc-container">
+
+    <h1 class="class-name">AABB</h1>
+    <div class="class-section">
+
+
+        <div class="class-descriptions">
+            <h4 class="class-subtitle">Brief Description</h4>
+            <div class="class-brief-description">
+                 Axis-Aligned Bounding Box. 
+            </div>
+            <h4 class="class-subtitle">Full Description</h4>
+            <div class="class-description">
+                 AABB provides an 3D Axis-Aligned Bounding Box. It consists of a position and a size, and several utility functions. It is typically used for simple (fast) overlap tests. 
+            </div>
+        </div> <!-- end div.class-descriptions -->
+
+        <div class="class-methods">
+            <h2 class="class-title">Methods</h2>
+
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/encloses" href="#" class="class-method-name dashAnchor">encloses</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">encloses</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="AABB.html" class="class-specified-type">AABB</a>
+                                <span class="class-specified-name">with</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return true if this [AABB] completely encloses another one. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/expand" href="#" class="class-method-name dashAnchor">expand</a></h3>
+                <span class="class-method-declaration">
+                    <a href="AABB.html" class="class-specified-type">AABB</a>
+                    <span class="class-specified-name">expand</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Vector3.html" class="class-specified-type">Vector3</a>
+                                <span class="class-specified-name">to_point</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return this [AABB] expanded to include a given point. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_area" href="#" class="class-method-name dashAnchor">get_area</a></h3>
+                <span class="class-method-declaration">
+                    <a href="float.html" class="class-specified-type">float</a>
+                    <span class="class-specified-name">get_area</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Get the area inside the [AABB]. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_endpoint" href="#" class="class-method-name dashAnchor">get_endpoint</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Vector3.html" class="class-specified-type">Vector3</a>
+                    <span class="class-specified-name">get_endpoint</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="int.html" class="class-specified-type">int</a>
+                                <span class="class-specified-name">idx</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Get the position of the 8 endpoints of the [AABB] in space. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_longest_axis" href="#" class="class-method-name dashAnchor">get_longest_axis</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Vector3.html" class="class-specified-type">Vector3</a>
+                    <span class="class-specified-name">get_longest_axis</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the normalized longest axis of the [AABB]. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_longest_axis_index" href="#" class="class-method-name dashAnchor">get_longest_axis_index</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">get_longest_axis_index</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the index of the longest axis of the [AABB] (according to [Vector3]::AXIS* enum). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_longest_axis_size" href="#" class="class-method-name dashAnchor">get_longest_axis_size</a></h3>
+                <span class="class-method-declaration">
+                    <a href="float.html" class="class-specified-type">float</a>
+                    <span class="class-specified-name">get_longest_axis_size</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the scalar length of the longest axis of the [AABB]. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_shortest_axis" href="#" class="class-method-name dashAnchor">get_shortest_axis</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Vector3.html" class="class-specified-type">Vector3</a>
+                    <span class="class-specified-name">get_shortest_axis</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the normalized shortest axis of the [AABB]. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_shortest_axis_index" href="#" class="class-method-name dashAnchor">get_shortest_axis_index</a></h3>
+                <span class="class-method-declaration">
+                    <a href="int.html" class="class-specified-type">int</a>
+                    <span class="class-specified-name">get_shortest_axis_index</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the index of the shortest axis of the [AABB] (according to [Vector3]::AXIS* enum). 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_shortest_axis_size" href="#" class="class-method-name dashAnchor">get_shortest_axis_size</a></h3>
+                <span class="class-method-declaration">
+                    <a href="float.html" class="class-specified-type">float</a>
+                    <span class="class-specified-name">get_shortest_axis_size</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the scalar length of the shortest axis of the [AABB]. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/get_support" href="#" class="class-method-name dashAnchor">get_support</a></h3>
+                <span class="class-method-declaration">
+                    <a href="Vector3.html" class="class-specified-type">Vector3</a>
+                    <span class="class-specified-name">get_support</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Vector3.html" class="class-specified-type">Vector3</a>
+                                <span class="class-specified-name">dir</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the support point in a given direction. This is useful for collision detection algorithms. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/grow" href="#" class="class-method-name dashAnchor">grow</a></h3>
+                <span class="class-method-declaration">
+                    <a href="AABB.html" class="class-specified-type">AABB</a>
+                    <span class="class-specified-name">grow</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="float.html" class="class-specified-type">float</a>
+                                <span class="class-specified-name">by</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return a copy of the AABB grown a given a mount of units towards all the sides. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/has_no_area" href="#" class="class-method-name dashAnchor">has_no_area</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">has_no_area</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return true if the [AABB] is flat or empty. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/has_no_surface" href="#" class="class-method-name dashAnchor">has_no_surface</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">has_no_surface</span>
+                    (
+                        <span class="class-specified-arguments">
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return true if the [AABB] is empty. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/has_point" href="#" class="class-method-name dashAnchor">has_point</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">has_point</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Vector3.html" class="class-specified-type">Vector3</a>
+                                <span class="class-specified-name">point</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return true if the [AABB] contains a point. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/intersection" href="#" class="class-method-name dashAnchor">intersection</a></h3>
+                <span class="class-method-declaration">
+                    <a href="AABB.html" class="class-specified-type">AABB</a>
+                    <span class="class-specified-name">intersection</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="AABB.html" class="class-specified-type">AABB</a>
+                                <span class="class-specified-name">with</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return the intersection between two [AABB]s. An empty AABB (size 0,0,0) is returned on failure. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/intersects" href="#" class="class-method-name dashAnchor">intersects</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">intersects</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="AABB.html" class="class-specified-type">AABB</a>
+                                <span class="class-specified-name">with</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return true if the [AABB] overlaps with another. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/intersects_plane" href="#" class="class-method-name dashAnchor">intersects_plane</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">intersects_plane</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Plane.html" class="class-specified-type">Plane</a>
+                                <span class="class-specified-name">plane</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Return true if the AABB is at both sides of a plane. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/intersects_segment" href="#" class="class-method-name dashAnchor">intersects_segment</a></h3>
+                <span class="class-method-declaration">
+                    <a href="bool.html" class="class-specified-type">bool</a>
+                    <span class="class-specified-name">intersects_segment</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Vector3.html" class="class-specified-type">Vector3</a>
+                                <span class="class-specified-name">from</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Vector3.html" class="class-specified-type">Vector3</a>
+                                <span class="class-specified-name">to</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/merge" href="#" class="class-method-name dashAnchor">merge</a></h3>
+                <span class="class-method-declaration">
+                    <a href="AABB.html" class="class-specified-type">AABB</a>
+                    <span class="class-specified-name">merge</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="AABB.html" class="class-specified-type">AABB</a>
+                                <span class="class-specified-name">with</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Combine this [AABB] with another one, a larger one is returned that contains both. 
+                </div>
+
+
+                    <hr>
+            </div> <!-- end div.class-method -->
+            <div class="class-method">
+                <h3><a name="//apple_ref/cpp/Method/AABB" href="#" class="class-method-name dashAnchor">AABB</a></h3>
+                <span class="class-method-declaration">
+                    <a href=".html" class="class-specified-type"></a>
+                    <span class="class-specified-name">AABB</span>
+                    (
+                        <span class="class-specified-arguments">
+                            <span class="class-specified-argument">
+                                <a href="Vector3.html" class="class-specified-type">Vector3</a>
+                                <span class="class-specified-name">pos</span>
+                            </span>
+                            ,
+                            <span class="class-specified-argument">
+                                <a href="Vector3.html" class="class-specified-type">Vector3</a>
+                                <span class="class-specified-name">size</span>
+                            </span>
+                        </span> <!-- end span.class-specified-arguments -->
+                    )
+                </span> <!-- end span.class-method-declaration -->
+
+
+
+                <div class="class-description">
+                     Optional constructor, accepts position and size. 
+                </div>
+
+
+            </div> <!-- end div.class-method -->
+        </div> <!-- end div.class-methods -->
+
+
+
+        <div class="class-members">
+            <h2 class="class-title">Members</h2>
+            <div class="class-member">
+                <a href="Vector3.html" class="class-specified-type">Vector3</a>
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Variable/pos" class="dashAnchor">pos</a></span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-member">
+                <a href="Vector3.html" class="class-specified-type">Vector3</a>
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Variable/size" class="dashAnchor">size</a></span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+            <div class="class-member">
+                <a href="Vector3.html" class="class-specified-type">Vector3</a>
+                <span class="class-specified-name"><a name="//apple_ref/cpp/Variable/end" class="dashAnchor">end</a></span>
+                <div class="class-description">
+                     
+                </div>
+            </div>
+        </div> <!-- ned div.class-members -->
+
+
+
+
+    </div> <!-- end div.class-section -->
+</div>
+<!-------------- END HERE ---------------->
+
+</body>
+
+</html>

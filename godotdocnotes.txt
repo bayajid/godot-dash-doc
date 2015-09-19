@@ -1,0 +1,132 @@
+TODO:
+    [DONE]Add dash doc toc names
+    [DONE]Add anchors to other types
+    [DONE]Optionally show methods (or any other section) only if they exist
+    [DONE]add icon
+    []create index page and add "<key>dashIndexFilePath</key><string>index.html</string>" to Info.plist
+    []native type names such as 'real', 'int', 'float', etc. should do something other than 404
+
+
+Elements:
+    """core_classes.xml, engine_classes.xml"""
+    doc [version, name]
+    class [category, inherits, name]
+        brief_description
+            *text*
+        description
+            *text*
+        methods
+            method [name]
+            argument [index, name, type]
+                *text*
+            return [type]
+                *text*
+            description
+                *text*
+        constants
+            constant [name, value]
+                *text*
+        members
+            member [name, type]
+                *text*
+        signals
+            signal [name]
+                argument [index, name, type]
+                    *text*
+                description
+                    *text*
+
+
+Dash Docset Notes:
+    Entry Types:
+        class            = Class --
+            category     = Category
+            methods ---------------
+                method   = Method
+            constants -------------
+                constant = Constant
+            members ---------------
+                member   = Variable
+            signals ---------------
+                signal   = Event
+        Special Cases -------------
+            @Global      = Global
+            Builtin      = Builtin
+
+Process:
+    Separate xml file by classes
+    /* USE HANDLEBAR TEMPLATE
+    Wrap those classes in html
+        Include appropriate css classes
+        add relative links not specific to Dash
+            Inherited Classes
+            The types for returns, arguments, members, etc.
+    */
+    Write to corresponding file for raw that can be used by someone else
+    Add in Dash Docset table of content links
+    Write to corresponding file in Dash Docset Resources/Documents
+    Using the data from the xml
+        populate search index with
+            the Name of Entry
+            the Entry Type
+            the Path to Recently Created HTML File
+    TODO CREATE Index Page
+        A tree of all classes separated by category
+
+Scripts / Script Parts:
+    IndexPageCreator
+
+
+HTML Template:
+    div.class-section
+        h1.class-name
+        div.class-descriptions
+            h4.class-subtitle
+            div.class-brief-description
+            h4.class-subtitle
+            div.class-description
+        div.class-methods
+            h3.class-title
+            div.class-method <!-- for each, separated by <hr> -->
+                h4 a.class-method-name
+                span.class-method-declaration <!-- manually set overflow-x -->
+                    a.class-specified-type
+                    span.class-specified-name
+                    span.class-specified-arguments
+                        span.class-specified-argument
+                            a.class-specified-type
+                            span.class-specified-name
+                #if any args have *text*
+                    div.class-arguments
+                        h4.class-subtitle
+                        div.class-argument-table
+                            div.class-argument-row
+                                div.class-specified-name.class-argument-name-col
+                                div.class-argument-col
+                                    a.class-specified-type <!-- maybe this shouldn't be here -->
+                                div.class-description.class-argument-descrip-col
+                #endif
+                div.class-description
+        div.class-constants
+            h3.class-title
+            div.class-constant <!-- for each, separated by <br> -->
+                span.class-specified-name
+                span.class-specified-value
+                div.class-description
+        div.class-members
+            h3.class-title
+            div.class-member <!-- for each, separated by <br> -->
+                span.class-specified-type
+                span.class-specified-name
+                div.class-description
+        div.class-signals
+            h3.class-title
+            div.class-signal <!-- for each, separated by <br> -->
+                div.class-specified-name
+                div.class-arguments
+                    div.class-argument-table
+                        div.class-argument-row
+                            div.class-specified-name.class-argument-col
+                            div.class-argument-col a.class-specified-type
+                            div.class-description.class-argument-col
+                div.class-description
