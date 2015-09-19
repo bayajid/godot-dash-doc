@@ -29,10 +29,12 @@ Install [Bourbon Neat](http://neat.bourbon.io/) into the _resources/stylesheets_
 ###### Generating
 
 Run `npm run <command>` at the root of this project folder.  
-Command can be:
+Command can be:  
+
     - gen-docset
     - gen-html
-    - gen-both
+    - gen-both  
+
 The docset and html will be in the folder _ouput_.
 
 ###### Styling
