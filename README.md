@@ -4,12 +4,17 @@ Generates plain html and html that's marked up for [Dash](https://kapeli.com/das
 
 #### Table of Contents
 
-1. [How to use](#how-to-use)
+1. [Get The Docset](#get-the-docset)
+2. [How to use](#how-to-use)
     1. [Setup](#setup)
     2. [Generating](#generating)
     3. [Styling](#styling)
     4. [Structuring](#structuring)
-2. [Todo](#todo)
+3. [Todo](#todo)
+
+#### Get The Docset
+
+A docset is already generated in the _output_ folder. Download it and then double click it to install to dash. You may want to move it to another folder (like your home folder) before installing.
 
 #### How to use
 
