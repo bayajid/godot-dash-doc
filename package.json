@@ -11,7 +11,8 @@
   "dependencies": {
       "cheerio"    : "latest",
       "handlebars" : "latest",
-      "sqlite3"    : "latest"
+      "sqlite3"    : "latest",
+      "cson-light" : "latest"
   },
   "author": "IndicaInkwell"
 }
